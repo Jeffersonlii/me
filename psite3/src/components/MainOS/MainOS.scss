@@ -7,15 +7,19 @@ $dot-color: white;
 $dot-size: 2px;
 $dot-space: 3px;
 
+.host {
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0 0;
+  filter: contrast(0.8);
+}
 .OSbackground {
-  // box-shadow: 5px 5px rgb(155, 72, 72), 10px 10px rgba(155, 72, 72, 0.3),
-  //   15px 15px rgba(155, 72, 72, 0.2), 20px 20px rgba(155, 72, 72, 0.1),
-  //   25px 25px rgba(155, 72, 72, 0.05);
+  // box-shadow:
 
   display: flex;
   flex-direction: column;
   width: 45rem;
   height: 30rem;
+  animation: flicker 0.15s infinite;
   background: linear-gradient(
         90deg,
         $bg-color ($dot-space - $dot-size),
@@ -65,5 +69,13 @@ $dot-space: 3px;
   .bounds {
     position: relative;
     flex-grow: 9;
+  }
+}
+@keyframes flicker {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      opacity: 0.85 + random();
+    }
   }
 }

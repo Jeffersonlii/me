@@ -48,7 +48,8 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
     render() {
       return (
         <Draggable handle=".OSheader" >
-          <div  className="OSbackground">
+        <div className="host">
+            <div  className="OSbackground">
             <div className="OSheader">
                 <div className="link img" >
                     <div className="img">
@@ -73,6 +74,7 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
                 {this.state.activeWindows}
             </div>
           </div>
+        </div>  
         </Draggable>);
     }
 }
