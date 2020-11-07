@@ -19,9 +19,10 @@ export default function Window(props) {
     handle=".header" 
     {...dragHandlers}
     onMouseDown={onStart} 
+    bounds="parent"
     >
-        <div className="window" style={{width: props?.width ?? '40rem', height: props?.height ?? '20rem'}}>
-            <div className="header">Mac System Software</div>
+        <div className="window" style={{width: props?.width ?? '30rem', height: props?.height ?? '15rem'}}>
+            <div className="header">{props?.header ?? 'UNDEFINED_HEADER'}</div>
             <div className="infoHeader"></div>
             <div className="contents"></div>
         </div>

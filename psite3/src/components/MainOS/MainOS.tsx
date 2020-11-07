@@ -1,14 +1,17 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 import Window from '../Window/Window';
+import logo from './../../media/appLogo.png';
 import './MainOS.scss';
 export default class MainOS extends React.Component {
     render() {
       return (
-      <div>
-        <Draggable handle=".OSheader" >
+        <Draggable handle=".OSheader" bounds="parent">
           <div  className="OSbackground">
             <div className="OSheader">
+                <div className="link" >  
+                <img src={logo} />
+                </div>
                 <div className="link">
                     File
                 </div>
@@ -23,11 +26,11 @@ export default class MainOS extends React.Component {
                 </div>
                 <div style={{flexGrow: 9}}></div>
             </div>
-
-            <Window width="20rem"></Window>
-            <Window width="40rem"></Window>
+            <div className="brounds">
+                <Window width="20rem"></Window>
+                <Window width="35rem"></Window>
+            </div>
           </div>
-        </Draggable>
-      </div>);
+        </Draggable>);
     }
 }

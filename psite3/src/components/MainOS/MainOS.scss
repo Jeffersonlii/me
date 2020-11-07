@@ -29,13 +29,26 @@ $dot-space: 2px;
     border-bottom: $border;
     .link {
       margin-right: 1rem;
+      display: flex;
+      & img {
+        height: 1.2rem;
+        margin: 0.08rem 0.08rem 0 0.08rem;
+        object-fit: cover;
+        filter: none;
+        &:hover {
+          filter: invert(1);
+        }
+      }
       &:hover {
         background-color: black;
         color: white;
       }
       &:first-of-type {
-        margin-left: 2rem;
+        margin-left: 1rem;
       }
     }
+  }
+  .brounds {
+    position: relative;
   }
 }
