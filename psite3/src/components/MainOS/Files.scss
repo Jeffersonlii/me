@@ -1,0 +1,34 @@
+.desktop-files {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6 1fr);
+
+  align-items: center;
+  justify-items: center;
+
+  grid-template-areas:
+    '. . . .  me . '
+    '. . . . exp dog'
+    '. . . . . skls'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .';
+
+  .file {
+    cursor: pointer;
+  }
+  #me {
+    grid-area: me;
+  }
+  #exp {
+    grid-area: exp;
+  }
+  #dog {
+    grid-area: dog;
+  }
+  #skl {
+    grid-area: skls;
+  }
+}
