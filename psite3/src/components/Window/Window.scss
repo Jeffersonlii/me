@@ -18,12 +18,15 @@
   border-bottom: $border;
   cursor: pointer;
   position: relative;
-
+  display: flex;
+  .title {
+    margin: 0 0.5rem;
+  }
   .close {
     position: absolute;
     margin-bottom: auto;
     margin-top: auto;
-    left: 6px;
+    left: 1rem;
     top: 0;
     text-align: center;
     /* right: 0; */
@@ -32,6 +35,7 @@
     height: 0.7rem;
     border: 1px black solid;
     cursor: pointer;
+    background-color: white;
     &:active {
       background-color: black;
       color: black;
@@ -41,4 +45,16 @@
 .contents {
   overflow-y: scroll;
   overflow-x: scroll;
+}
+
+.lineWrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 0 0.2rem;
+  .line {
+    border-bottom: 1px black solid;
+  }
 }
