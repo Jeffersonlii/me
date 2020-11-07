@@ -17,13 +17,28 @@
 .header {
   border-bottom: $border;
   cursor: pointer;
+  position: relative;
+
+  .close {
+    position: absolute;
+    margin-bottom: auto;
+    margin-top: auto;
+    left: 6px;
+    top: 0;
+    text-align: center;
+    /* right: 0; */
+    bottom: 0;
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 1px black solid;
+    cursor: pointer;
+    &:active {
+      background-color: black;
+      color: black;
+    }
+  }
 }
 .contents {
   overflow-y: scroll;
-}
-.close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
+  overflow-x: scroll;
 }

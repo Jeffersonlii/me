@@ -1,7 +1,7 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 import Window from '../Window/Window';
-import logo from './../../media/appLogo.png';
+import logo from './../../public/appLogo.png';
 import './MainOS.scss';
 export default class MainOS extends React.Component<{},{activeWindows: any[], windowID: number}> {
     constructor(props: {} | Readonly<{}>) {
@@ -18,6 +18,7 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
                 key={this.state.windowID} 
                 windowID={this.state.windowID} 
                 onCloseWindow={this.onCloseWindow} >
+                    <div>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quos, ut, eos odio
                      voluptas necessitatibus quod odit libero eum adipisci culpa cumque d
                      icta qui corrupti voluptatibus minus fugit. Eum, dolorum?
@@ -30,6 +31,8 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mol
                     estiae distinctio animi magni libero, dolore quas enim laudantium 
                     ut vero consequatur? Ex sed hic placeat velit, doloribus dolorem iste fugiat?
+                    </div>
+  
                 </Window>
             ],
             windowID: this.state.windowID + 1
@@ -44,7 +47,7 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
 
     render() {
       return (
-        <Draggable handle=".OSheader" bounds="parent">
+        <Draggable handle=".OSheader" >
           <div  className="OSbackground">
             <div className="OSheader">
                 <div className="link img" >

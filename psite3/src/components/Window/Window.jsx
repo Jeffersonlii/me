@@ -25,12 +25,10 @@ export default function Window(props) {
     >
         <div className="window" style={{width: props?.width ?? '30rem', height: props?.height ?? '15rem'}}>
             <div className="header">{props?.header ?? 'UNDEFINED_HEADER'}
+                <div className="close" onClick={onCloseWindow}></div>
             </div>
             <div className="infoHeader"></div>
             <div className="contents">{props.children}</div>
-            <div className="close" onClick={onCloseWindow}>
-                CLOSE
-            </div>
         </div>
     </Draggable>);
     
