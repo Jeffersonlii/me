@@ -1,0 +1,41 @@
+@import '../../styles.scss';
+// Colors
+$bg-color: #616161;
+$dot-color: white;
+
+// Dimensions
+$dot-size: 1.5px;
+$dot-space: 2px;
+
+.OSbackground {
+  width: 40rem;
+  height: 30rem;
+  background: linear-gradient(
+        90deg,
+        $bg-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
+  overflow: hidden;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border: $lightBorder;
+  .OSheader {
+    cursor: pointer;
+    display: flex;
+    background-color: white;
+    border-bottom: $border;
+    .link {
+      margin-right: 1rem;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+      &:first-of-type {
+        margin-left: 2rem;
+      }
+    }
+  }
+}

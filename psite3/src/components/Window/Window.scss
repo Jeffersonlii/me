@@ -1,0 +1,16 @@
+@import './../../styles.scss';
+.wrap {
+  position: relative;
+}
+.window {
+  border-top: $border;
+  border-right: $heavyBorder;
+  border-bottom: $heavyBorder;
+  border-left: $border;
+  background-color: white;
+  position: relative;
+}
+.header {
+  border-bottom: $border;
+  cursor: pointer;
+}
