@@ -1,5 +1,5 @@
 import React from 'react';
-import Draggable from 'react-draggable';
+import Draggable, { DraggableEventHandler } from 'react-draggable';
 import Window from '../Window/Window';
 import logo from './../../public/appLogo.png';
 import './Files.scss';
@@ -45,10 +45,18 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
             activeWindows: this.state.activeWindows.filter((a)=>a.props.windowID !== id),
         })
     }
-
+    preventOutofScreenDrag = (e: MouseEvent) => {
+        if(
+            e.clientY <= 0 ||
+            e.clientX <= 0 ||
+            e.clientX >= window.innerWidth||
+            e.clientY >= window.innerHeight){
+            return false  
+        }
+      };
     render() {
       return (
-        <Draggable handle=".OSheader" >
+        <Draggable handle=".OSheader" onDrag={this.preventOutofScreenDrag as DraggableEventHandler} >
         <div className="host">
             <div  className="OSbackground">
             <div className="OSheader">
