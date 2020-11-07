@@ -13,18 +13,17 @@ export default function Window(props) {
         }
       }
     
-    const dragHandlers = {};
     return (
     <Draggable 
     handle=".header" 
-    {...dragHandlers}
     onMouseDown={onStart} 
     bounds="parent"
+    // position={{x: '50%', y: '50%'}}
     >
         <div className="window" style={{width: props?.width ?? '30rem', height: props?.height ?? '15rem'}}>
             <div className="header">{props?.header ?? 'UNDEFINED_HEADER'}</div>
             <div className="infoHeader"></div>
-            <div className="contents"></div>
+            <div className="contents">{props.children}</div>
         </div>
     </Draggable>);
     

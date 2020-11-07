@@ -8,7 +8,9 @@
   border-bottom: $heavyBorder;
   border-left: $border;
   background-color: white;
-  position: relative;
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
 }
 .header {
   border-bottom: $border;

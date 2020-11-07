@@ -3,8 +3,27 @@ import Draggable from 'react-draggable';
 import Window from '../Window/Window';
 import logo from './../../media/appLogo.png';
 import './MainOS.scss';
-export default class MainOS extends React.Component {
+export default class MainOS extends React.Component<{},{activeWindows: any[]}> {
+    constructor(props: {} | Readonly<{}>) {
+        super(props);
+
+        this.state = {activeWindows: [
+            <Window></Window>,
+        ]};
+        setTimeout(() => {
+            this.setState({
+                activeWindows: [<Window></Window>, ...this.state.activeWindows]
+              });
+              setTimeout(() => {
+                this.setState({
+                    activeWindows: [...this.state.activeWindows, <Window></Window>]
+                  });
+            }, 2000);
+        }, 2000);
+    }
+
     render() {
+
       return (
         <Draggable handle=".OSheader" bounds="parent">
           <div  className="OSbackground">
@@ -28,9 +47,8 @@ export default class MainOS extends React.Component {
                 </div>
                 <div style={{flexGrow: 9}}></div>
             </div>
-            <div className="brounds">
-                <Window width="20rem"></Window>
-                <Window width="35rem"></Window>
+            <div className="bounds">
+                {this.state.activeWindows}
             </div>
           </div>
         </Draggable>);

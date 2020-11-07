@@ -8,6 +8,12 @@ $dot-size: 1.5px;
 $dot-space: 2px;
 
 .OSbackground {
+  box-shadow: 5px 5px rgb(155, 72, 72), 10px 10px rgba(155, 72, 72, 0.3),
+    15px 15px rgba(155, 72, 72, 0.2), 20px 20px rgba(155, 72, 72, 0.1),
+    25px 25px rgba(155, 72, 72, 0.05);
+
+  display: flex;
+  flex-direction: column;
   width: 40rem;
   height: 30rem;
   background: linear-gradient(
@@ -56,7 +62,8 @@ $dot-space: 2px;
       }
     }
   }
-  .brounds {
+  .bounds {
     position: relative;
+    flex-grow: 9;
   }
 }
