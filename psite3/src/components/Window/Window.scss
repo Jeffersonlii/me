@@ -11,10 +11,15 @@
   position: absolute;
   top: 5rem;
   left: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .header {
   border-bottom: $border;
   cursor: pointer;
+}
+.contents {
+  overflow-y: scroll;
 }
 .close {
   position: absolute;

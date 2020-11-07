@@ -18,7 +18,18 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
                 key={this.state.windowID} 
                 windowID={this.state.windowID} 
                 onCloseWindow={this.onCloseWindow} >
-                    
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quos, ut, eos odio
+                     voluptas necessitatibus quod odit libero eum adipisci culpa cumque d
+                     icta qui corrupti voluptatibus minus fugit. Eum, dolorum?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mole
+                    stiae distinctio animi magni libero, dolore quas enim laudantium ut
+                     vero consequatur? Ex sed hic placeat velit, doloribus dolorem iste fugiat?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                     quos, ut, eos odio voluptas necessitatibus quod odit libero eum ad
+                     ipisci culpa cumque dicta qui corrupti voluptatibus minus fugit. Eum, dolorum?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mol
+                    estiae distinctio animi magni libero, dolore quas enim laudantium 
+                    ut vero consequatur? Ex sed hic placeat velit, doloribus dolorem iste fugiat?
                 </Window>
             ],
             windowID: this.state.windowID + 1
