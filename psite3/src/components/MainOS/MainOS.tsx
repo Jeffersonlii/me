@@ -9,8 +9,10 @@ export default class MainOS extends React.Component {
         <Draggable handle=".OSheader" bounds="parent">
           <div  className="OSbackground">
             <div className="OSheader">
-                <div className="link" >  
-                <img src={logo} />
+                <div className="link img" >
+                    <div className="img">
+                        <img src={logo} alt="apple logo"/>
+                    </div>  
                 </div>
                 <div className="link">
                     File

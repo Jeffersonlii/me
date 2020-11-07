@@ -28,12 +28,20 @@ $dot-space: 2px;
     background-color: white;
     border-bottom: $border;
     .link {
-      margin-right: 1rem;
-      display: flex;
-      & img {
-        height: 1.2rem;
-        margin: 0.08rem 0.08rem 0 0.08rem;
-        object-fit: cover;
+      &.img {
+        padding: 0rem;
+      }
+      padding: 0 0.5rem;
+      & .img {
+        padding: none;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        & img {
+          height: 1.2rem;
+          object-fit: cover;
+          margin-top: 0.08rem;
+        }
         filter: none;
         &:hover {
           filter: invert(1);
