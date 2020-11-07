@@ -79,7 +79,7 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
                 </div>
                 <div style={{flexGrow: 9}}></div>
             </div>
-            <div className="desktop">
+            <div id="desktop">
                 {this.state.activeWindows}
                 <DesktopFiles></DesktopFiles>
             </div>
@@ -99,13 +99,16 @@ function DesktopFiles(){
                 EXPERIENCES<br></br>.TXT
             </div>
             <div className="file" id="dog">
-                DOG.GIF
+                DOGGY.GIF
             </div>
             <div className="file" id="skl">
                 SKILLS.TXT
             </div>
             <div className="file" id="gme">
                 TODO_<br></br>GAME.exe
+            </div>
+            <div className="file" id="res">
+                RESUME.PDF
             </div>
         </div>
     )
