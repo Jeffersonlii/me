@@ -33,7 +33,7 @@ export default function Window(props: any) {
     defaultPosition= {{x: randomPos, y: randomPos}}
     onDrag={preventOutofScreenDrag as DraggableEventHandler} 
     >
-        <div className="window" style={{width: props?.width ?? '30rem', height: props?.height ?? '15rem'}}>
+        <div className="window" >
             <div className="header">
                 <HeaderLines></HeaderLines>
                 <div className="title">
@@ -43,7 +43,14 @@ export default function Window(props: any) {
                 <HeaderLines></HeaderLines>
             </div>
             <div className="infoHeader"></div>
-            <div className="contents">{props.children}</div>
+            <div className="contents"style={{
+                width: props?.width ?? '30rem',
+                minWidth: props?.minWidth ?? '30rem',
+                height: props?.height ?? '15rem',
+                minHeight: props?.minHeight ?? '15rem'}}
+            >   
+                {props.children}    
+            </div>
         </div>
     </Draggable>);
     

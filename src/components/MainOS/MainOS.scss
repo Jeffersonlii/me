@@ -20,6 +20,7 @@ $dot-space: 3px;
   width: 45rem;
   height: 30rem;
   animation: flicker 0.15s infinite;
+
   background: linear-gradient(
         90deg,
         $bg-color ($dot-space - $dot-size),
