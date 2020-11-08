@@ -3,4 +3,4 @@ Personal Site V3 !
  - made with react 
  
  
-![image](https://user-images.githubusercontent.com/32963293/98435545-d62c8f00-20a1-11eb-8ce6-cea4489dd90c.png)
+![image](https://user-images.githubusercontent.com/32963293/98479936-60214880-21c5-11eb-9d26-90d6a1f93c92.png)
