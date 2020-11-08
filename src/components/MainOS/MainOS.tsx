@@ -1,62 +1,15 @@
 import React from 'react';
-import Draggable, { DraggableEventHandler } from 'react-draggable';
-import Window from '../Window/Window';
+import Draggable from '../Draggable/CustomDraggable';
 import logo from './../../public/appLogo.png';
 import './Files.scss';
 import './MainOS.scss';
-export default class MainOS extends React.Component<{},{activeWindows: any[], windowID: number}> {
-    constructor(props: {} | Readonly<{}>) {
-        super(props);
-        this.state = {activeWindows: [], windowID: 0};
-    }
-
-    openWindow = (params?: {[key:string]: any}) => {
-        this.setState({
-            activeWindows: [
-                ...this.state.activeWindows,
-                <Window 
-                {...params} 
-                key={this.state.windowID} 
-                windowID={this.state.windowID} 
-                onCloseWindow={this.onCloseWindow} >
-                    <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quos, ut, eos odio
-                     voluptas necessitatibus quod odit libero eum adipisci culpa cumque d
-                     icta qui corrupti voluptatibus minus fugit. Eum, dolorum?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mole
-                    stiae distinctio animi magni libero, dolore quas enim laudantium ut
-                     vero consequatur? Ex sed hic placeat velit, doloribus dolorem iste fugiat?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-                     quos, ut, eos odio voluptas necessitatibus quod odit libero eum ad
-                     ipisci culpa cumque dicta qui corrupti voluptatibus minus fugit. Eum, dolorum?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mol
-                    estiae distinctio animi magni libero, dolore quas enim laudantium 
-                    ut vero consequatur? Ex sed hic placeat velit, doloribus dolorem iste fugiat?
-                    </div>
-  
-                </Window>
-            ],
-            windowID: this.state.windowID + 1
-        })
-    }
-    
-    onCloseWindow = (id: any) => { 
-        this.setState({
-            activeWindows: this.state.activeWindows.filter((a)=>a.props.windowID !== id),
-        })
-    }
-    preventOutofScreenDrag = (e: MouseEvent) => {
-        if(
-            e.clientY <= 0 ||
-            e.clientX <= 0 ||
-            e.clientX >= window.innerWidth||
-            e.clientY >= window.innerHeight){
-            return false  
-        }
-      };
+export default class MainOS extends React.Component<any> {
     render() {
       return (
-        <Draggable handle=".OSheader" onDrag={this.preventOutofScreenDrag as DraggableEventHandler} >
+        <Draggable 
+         handle=".OSheader"
+         onMouseDown={undefined} 
+          >
         <div className="host">
             <div  className="OSbackground">
             <div className="OSheader">
@@ -65,7 +18,7 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
                         <img src={logo} alt="apple logo"/>
                     </div>  
                 </div>
-                <div className="link" onClick={this.openWindow}>
+                <div className="link" onClick={this.props.openWindow}>
                     File
                 </div>
                 <div className="link">
@@ -80,7 +33,6 @@ export default class MainOS extends React.Component<{},{activeWindows: any[], wi
                 <div style={{flexGrow: 9}}></div>
             </div>
             <div id="desktop">
-                {this.state.activeWindows}
                 <DesktopFiles></DesktopFiles>
             </div>
           </div>

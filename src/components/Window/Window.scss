@@ -1,16 +1,11 @@
 @import './../../styles.scss';
-.wrap {
-  position: relative;
-}
 .window {
   border-top: $border;
   border-right: $heavyBorder;
   border-bottom: $heavyBorder;
   border-left: $border;
   background-color: white;
-  position: absolute;
-  top: 5rem;
-  left: 2rem;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -29,7 +24,6 @@
     left: 0.6rem;
     top: 0;
     text-align: center;
-    /* right: 0; */
     bottom: 0;
     width: 0.8rem;
     height: 0.7rem;

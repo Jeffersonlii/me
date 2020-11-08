@@ -1,39 +1,22 @@
 import React from 'react';
-import Draggable, { DraggableEventHandler } from 'react-draggable';
+import Draggable from '../Draggable/CustomDraggable';
 import './Window.scss';
 
-
-
 export default function Window(props: any) {
-    //todo move out of MainOS into parent
-    let onStart = (e: MouseEvent) => {
-        let elems: any = document.getElementsByClassName('window');
-        for(let i = 0; i < elems.length; i++) {
-          elems[i].style.zIndex = 1;
-          (e as any).currentTarget.style.zIndex = 9;
-        }
-      }
     let onCloseWindow = ()=>{
         props.onCloseWindow(props.windowID)
     }
-    let preventOutofScreenDrag = (e: MouseEvent) => {
-        if(
-            e.clientY <= 0 ||
-            e.clientX <= 0 ||
-            e.clientX >= window.innerWidth||
-            e.clientY >= window.innerHeight){
-            return false  
-        }
-      };
-    let randomPos = Math.floor(Math.random() * (40)) -20;
+
+    let randomPos = getRandomNumberBetween(100, 120);
+    let posPivots: any = document?.getElementById('desktop')?.getBoundingClientRect();
+    console.log(posPivots)
     return (
     <Draggable 
-    handle=".header" 
-    onMouseDown={onStart} 
-    defaultPosition= {{x: randomPos, y: randomPos}}
-    onDrag={preventOutofScreenDrag as DraggableEventHandler} 
+    handle=".header"
+    defaultClassName="uncenter"
+    defaultPosition= {{x: posPivots?.left + randomPos, y: posPivots?.top + randomPos}}
     >
-        <div className="window" >
+        <div className="window host">
             <div className="header">
                 <HeaderLines></HeaderLines>
                 <div className="title">
@@ -57,5 +40,12 @@ export default function Window(props: any) {
 }
 function HeaderLines(){
     let numLines = 6;
-    return <div className="lineWrap">{Array(numLines).fill(<div className="line"></div>)}</div>
+    let arr = Array(numLines)
+    arr.map((_, index)=><div className="line" key={index} ></div>)
+    return <div className="lineWrap">{arr}</div>
+}
+
+
+function getRandomNumberBetween(min: number,max: number){
+    return Math.floor(Math.random()*(max-min+1)+min);
 }
