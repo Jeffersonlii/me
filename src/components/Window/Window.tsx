@@ -7,14 +7,15 @@ export default function Window(props: any) {
         props.onCloseWindow(props.windowID)
     }
 
-    let randomPos = getRandomNumberBetween(100, 120);
+    let randomPos = getRandomNumberBetween(80, 100);
     let posPivots: any = document?.getElementById('desktop')?.getBoundingClientRect();
     console.log(posPivots)
     return (
     <Draggable 
     handle=".header"
-    defaultClassName="uncenter"
-    defaultPosition= {{x: posPivots?.left + randomPos, y: posPivots?.top + randomPos}}
+    defaultPosition= {{
+        x: - window.innerWidth/2 + posPivots?.left + randomPos,
+        y: - window.innerHeight/2 +  posPivots?.top + randomPos }}
     >
         <div className="window host">
             <div className="header">

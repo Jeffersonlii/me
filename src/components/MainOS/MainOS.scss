@@ -32,6 +32,7 @@ $dot-space: 3px;
   border-radius: 0.5rem 0.5rem 0 0;
   border: $lightBorder;
   transition: width 0.5s;
+  transition: height 0.5s;
 
   .OSheader {
     cursor: pointer;
@@ -83,8 +84,7 @@ $dot-space: 3px;
 
 @media only screen and (max-width: 800px) {
   .OSbackground {
-    transition: 0.5s;
-    width: 90vw;
-    height: 90vh;
+    width: 95vw;
+    height: 95vh;
   }
 }

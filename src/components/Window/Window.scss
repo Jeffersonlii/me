@@ -8,6 +8,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  position: absolute;
 }
 .header {
   border-bottom: $border;
@@ -50,5 +51,18 @@
   margin: 0 0.2rem;
   .line {
     border-bottom: 1px black solid;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .contents {
+    transition: width 0.5s;
+    transition: height 0.5s;
+    min-width: unset !important;
+    min-height: unset !important;
+    width: 90vw !important;
+    height: 85vh !important;
+  }
+  .window {
+    position: relative;
   }
 }

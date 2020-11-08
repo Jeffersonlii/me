@@ -8,7 +8,7 @@ export default class MainOS extends React.Component<any> {
       return (
         <Draggable 
          handle=".OSheader"
-         onMouseDown={undefined} 
+         focusable={false}
           >
         <div className="host">
             <div  className="OSbackground">
