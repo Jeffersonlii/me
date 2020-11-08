@@ -12,8 +12,7 @@ export default class MainOS extends React.Component<any> {
          focusable={false}
           >
         <div className="fadein"></div>
-        <div className="host">
-            <div  className="OSbackground">
+        <div className="OSbackground">
             <div className="OSheader">
                 <div className="link img" >
                     <div className="img">
@@ -37,7 +36,6 @@ export default class MainOS extends React.Component<any> {
             <div id="desktop">
                 <DesktopFiles openWindow={this.props.openWindow}></DesktopFiles>
             </div>
-          </div>
         </div>  
         </Draggable>);
     }

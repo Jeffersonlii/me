@@ -16,7 +16,7 @@ export default function Window(props: any) {
         x: - window.innerWidth/2 + posPivots?.left + randomPos,
         y: - window.innerHeight/2 +  posPivots?.top + randomPos }}
     >
-        <div className="window host">
+        <div className="window">
             <div className="header">
                 <HeaderLines></HeaderLines>
                 <div className="title">
@@ -40,9 +40,9 @@ export default function Window(props: any) {
 }
 function HeaderLines(){
     let numLines = 6;
-    let arr = Array(numLines)
-    arr.map((_, index)=><div className="line" key={index} ></div>)
-    return <div className="lineWrap">{arr}</div>
+    let arr = Array(numLines).fill(0);
+    arr = arr.map((_, index)=><div className="line" key={index} ></div>);
+    return <div className="lineWrap">{arr}</div>;
 }
 
 

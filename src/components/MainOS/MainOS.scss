@@ -17,17 +17,11 @@ $dot-space: 3px;
   pointer-events: none;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-.host {
-  background-color: white;
-  border-radius: 0.5rem 0.5rem 0 0;
-  filter: contrast(0.8);
-}
 .OSbackground {
   display: flex;
   flex-direction: column;
   width: 45rem;
   height: 30rem;
-  animation: flicker 0.15s infinite;
   background: linear-gradient(
         90deg,
         $bg-color ($dot-space - $dot-size),
@@ -42,12 +36,14 @@ $dot-space: 3px;
   border: $lightBorder;
   transition: width 0.5s;
   transition: height 0.5s;
-
+  box-shadow: inset 0 0 10rem 0 grey;
+  animation: flicker 0.2s infinite;
   .OSheader {
     cursor: pointer;
     display: flex;
     background-color: white;
     border-bottom: $border;
+
     .link {
       &.img {
         padding: 0rem;
@@ -82,14 +78,6 @@ $dot-space: 3px;
     flex-grow: 9;
   }
 }
-@keyframes flicker {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      opacity: 0.85 + random();
-    }
-  }
-}
 
 @keyframes fadeIn {
   0% {
@@ -106,6 +94,14 @@ $dot-space: 3px;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes flicker {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      opacity: 0.9 + random();
+    }
   }
 }
 
