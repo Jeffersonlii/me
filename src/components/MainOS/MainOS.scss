@@ -13,8 +13,6 @@ $dot-space: 3px;
   filter: contrast(0.8);
 }
 .OSbackground {
-  // box-shadow:
-
   display: flex;
   flex-direction: column;
   width: 45rem;
@@ -33,6 +31,8 @@ $dot-space: 3px;
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
   border: $lightBorder;
+  transition: width 0.5s;
+
   .OSheader {
     cursor: pointer;
     display: flex;
@@ -78,5 +78,13 @@ $dot-space: 3px;
     #{percentage($i*(1/$steps))} {
       opacity: 0.85 + random();
     }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .OSbackground {
+    transition: 0.5s;
+    width: 90vw;
+    height: 90vh;
   }
 }
