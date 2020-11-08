@@ -6,7 +6,9 @@ export default  function DesktopFiles(props: any){
     let openWindow = (key: string) => {
         switch(key) {
             case 'Me':
-              return props.openWindow(<Me></Me>, {header:"JEFFERSON_LI_INTRO.TXT"});
+              return props.openWindow(<Me></Me>, {
+                  header:"JEFFERSON_LI_INTRO.TXT",
+                  width: '38rem', height: '18rem'});
             default:
               return 'foo';
           }

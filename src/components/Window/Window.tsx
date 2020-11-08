@@ -14,20 +14,18 @@ export default function Window(props: any) {
         from {
             height: 1rem;
             min-height: 1rem;
-            transition: 2s;
         }
         to {
             width: ${width};
             height: ${height};
-            transition: 2s;
         }
     `;
     const Contents = styled.div`
         width: ${width};
-        min-width:  ${width};
+        min-width:  20rem;
         height: ${height};
-        min-height: ${height}; 
-        animation: 1s ${expand} ease-out;
+        min-height: 5rem; 
+        animation: 0.3s ${expand} ease-out;
     `;
     
     let randomPos = getRandomNumberBetween(80, 100);
@@ -58,7 +56,7 @@ export default function Window(props: any) {
     
 }
 function HeaderLines(){
-    let numLines = 6;
+    let numLines = 4;
     let arr = Array(numLines).fill(0);
     arr = arr.map((_, index)=><div className="line" key={index} ></div>);
     return <div className="lineWrap">{arr}</div>;

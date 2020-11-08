@@ -1,11 +1,5 @@
 @import '../../styles.scss';
-// Colors
-$bg-color: #616161;
-$dot-color: white;
 
-// Dimensions
-$dot-size: 2px;
-$dot-space: 3px;
 .fadein {
   width: 100%;
   height: 100%;
@@ -22,16 +16,7 @@ $dot-space: 3px;
   flex-direction: column;
   width: 45rem;
   height: 30rem;
-  background: linear-gradient(
-        90deg,
-        $bg-color ($dot-space - $dot-size),
-        transparent 1%
-      )
-      center,
-    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-    $dot-color;
-  background-size: $dot-space $dot-space;
-
+  @extend .dotten-background;
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
   border: $lightBorder;
@@ -113,4 +98,23 @@ $dot-space: 3px;
     width: 95vw;
     height: 95vh;
   }
+}
+
+.dotten-background {
+  // Colors
+  $bg-color: grey;
+  $dot-color: white;
+
+  // Dimensions
+  $dot-size: 2px;
+  $dot-space: 3px;
+  background: linear-gradient(
+        90deg,
+        $bg-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
 }
