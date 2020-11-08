@@ -3,6 +3,7 @@ import Draggable from '../Draggable/CustomDraggable';
 import logo from './../../public/appLogo.png';
 import './Files.scss';
 import './MainOS.scss';
+import Me from './Pages/Me';
 export default class MainOS extends React.Component<any> {
     render() {
       return (
@@ -19,7 +20,7 @@ export default class MainOS extends React.Component<any> {
                         <img src={logo} alt="apple logo"/>
                     </div>  
                 </div>
-                <div className="link" onClick={this.props.openWindow}>
+                <div className="link">
                     File
                 </div>
                 <div className="link">
@@ -34,7 +35,7 @@ export default class MainOS extends React.Component<any> {
                 <div style={{flexGrow: 9}}></div>
             </div>
             <div id="desktop">
-                <DesktopFiles></DesktopFiles>
+                <DesktopFiles openWindow={this.props.openWindow}></DesktopFiles>
             </div>
           </div>
         </div>  
@@ -42,10 +43,19 @@ export default class MainOS extends React.Component<any> {
     }
 }
 
-function DesktopFiles(){
+function DesktopFiles(props: any){
+    let openWindow = (key: string) => {
+        switch(key) {
+            case 'Me':
+              return props.openWindow(<Me></Me>, {header:"JEFFERSON_LI_INTRO.TXT"});
+            default:
+              return 'foo';
+          }
+    }
+
     return (
         <div className="desktop-files">
-            <div className="file" id="me">
+            <div className="file" id="me" onClick={()=>openWindow("Me")}>
                 JEFFERSON_LI<br></br>_INTRO.TXT
             </div>
             <div className="file" id="exp">

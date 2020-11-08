@@ -9,7 +9,6 @@ export default function Window(props: any) {
 
     let randomPos = getRandomNumberBetween(80, 100);
     let posPivots: any = document?.getElementById('desktop')?.getBoundingClientRect();
-    console.log(posPivots)
     return (
     <Draggable 
     handle=".header"

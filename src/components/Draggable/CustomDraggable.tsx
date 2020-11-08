@@ -22,7 +22,6 @@ export default function CustomDraggable(props: any) {
         }
       };
     let focusable = props?.focusable ?? true;
-    console.log(focusable)
     return (
       <Draggable 
         onMouseDown={focusable ? onStart : undefined} 
