@@ -14,8 +14,8 @@ $dot-space: 3px;
   animation: fadeIn 5s;
   opacity: 0;
   z-index: 999;
-  pointer-events: none;
   border-radius: 0.5rem 0.5rem 0 0;
+  pointer-events: none;
 }
 .OSbackground {
   display: flex;
@@ -81,9 +81,11 @@ $dot-space: 3px;
 
 @keyframes fadeIn {
   0% {
+    pointer-events: all;
     opacity: 1;
   }
   25% {
+    pointer-events: all;
     opacity: 0.8;
   }
   50% {
