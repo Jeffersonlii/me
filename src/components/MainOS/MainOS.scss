@@ -31,6 +31,7 @@ $dot-space: 3px;
     linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
     $dot-color;
   background-size: $dot-space $dot-space;
+
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
   border: $lightBorder;
@@ -81,11 +82,11 @@ $dot-space: 3px;
 
 @keyframes fadeIn {
   0% {
-    pointer-events: all;
+    // pointer-events: all;
     opacity: 1;
   }
   25% {
-    pointer-events: all;
+    // pointer-events: all;
     opacity: 0.8;
   }
   50% {

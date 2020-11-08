@@ -17,6 +17,10 @@
 
   .file {
     cursor: pointer;
+    &:active {
+      color: white;
+      background-color: black;
+    }
   }
   #me {
     grid-area: me;

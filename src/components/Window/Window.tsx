@@ -1,12 +1,35 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
+import styled, { keyframes } from 'styled-components';
 import Draggable from '../Draggable/CustomDraggable';
 import './Window.scss';
-
 export default function Window(props: any) {
+    const width = props?.width ?? '30rem';
+    const height = props?.height ?? '15rem';
+
     let onCloseWindow = ()=>{
         props.onCloseWindow(props.windowID)
     }
-
+    const expand = keyframes`
+        from {
+            height: 1rem;
+            min-height: 1rem;
+            transition: 2s;
+        }
+        to {
+            width: ${width};
+            height: ${height};
+            transition: 2s;
+        }
+    `;
+    const Contents = styled.div`
+        width: ${width};
+        min-width:  ${width};
+        height: ${height};
+        min-height: ${height}; 
+        animation: 1s ${expand} ease-out;
+    `;
+    
     let randomPos = getRandomNumberBetween(80, 100);
     let posPivots: any = document?.getElementById('desktop')?.getBoundingClientRect();
     return (
@@ -26,14 +49,10 @@ export default function Window(props: any) {
                 <HeaderLines></HeaderLines>
             </div>
             <div className="infoHeader"></div>
-            <div className="contents"style={{
-                width: props?.width ?? '30rem',
-                minWidth: props?.minWidth ?? '30rem',
-                height: props?.height ?? '15rem',
-                minHeight: props?.minHeight ?? '15rem'}}
+            <Contents className="contents"
             >   
                 {props.children}    
-            </div>
+            </Contents>
         </div>
     </Draggable>);
     

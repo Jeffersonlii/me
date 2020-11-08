@@ -20,6 +20,7 @@ body {
   -moz-user-select: text !important; /* Firefox */
   -ms-user-select: text !important; /* Internet Explorer/Edge */
   user-select: text !important; /* Non-prefixed version, currently*/
+  text-align: justify;
 }
 //retro scroll bar styling
 ::-webkit-scrollbar,

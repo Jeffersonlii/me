@@ -3,10 +3,11 @@
 export default {
   "paragraph": [
     "Hi!, My name is Jefferson Li. <br><br>",
-    "I am a full stack developer specializing in Angular, with a focus in building maintanable and responsive software. <br> <br> ",
+    "I am a <b>Full Stack Developer</b> specializing in Angular, with a focus in building maintanable and responsive software ( try to break this site 😉 ). <br> <br> ",
     "Previously at <a href='https://temerityanalytics.com/' target='_blank'><b class='font-tertiary link' > Temerity Analytics</b></a>. <br>",
-    "Currently pursuing a specialist in Software Engineering and a minor in Statistics at the ",
-    "<a href='https://www.utoronto.ca' target='_blank'> <b class='font-tertiary-bold link' > University of Toronto </b></a >(2023)<br><br>"
+    "Currently pursuing a specialist in <b>Software Engineering</b> and a minor in <b>Statistics</b> at the ",
+    "<a href='https://www.utoronto.ca' target='_blank'> <b class='font-tertiary-bold link' > University of Toronto </b></a >(2023)<br><br>",
+    "I love going to the <b>gym</b>, <b>badminton</b> and <b>photography</b>, I also love to create and bringing <b>user friendly</b> and <b>responsive design</b> to life!"
   ],
   "qualifications": {
     "Technical Skills": {
