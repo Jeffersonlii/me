@@ -10,6 +10,7 @@ export default class MainOS extends React.Component<any> {
          handle=".OSheader"
          focusable={false}
           >
+        <div className="fadein"></div>
         <div className="host">
             <div  className="OSbackground">
             <div className="OSheader">
