@@ -1,6 +1,7 @@
 @import 'chicago.css';
 @import './components/MainOS/MainOS.scss';
 body {
+  overflow: hidden;
   margin: 0;
   // font
   font-family: ChigacoFLF, sans-serif;
