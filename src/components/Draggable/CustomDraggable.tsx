@@ -2,8 +2,6 @@ import React from 'react';
 import Draggable, { DraggableEventHandler } from 'react-draggable';
 import './CustomDraggable.scss';
 export default function CustomDraggable(props: any) {
-    
-
     let onStart = (e: MouseEvent) => {
         let elems: any = document.getElementsByClassName('focusable');
         for(let i = 0; i < elems.length; i++) {

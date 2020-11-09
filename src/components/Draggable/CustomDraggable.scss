@@ -2,6 +2,9 @@
 .focusable {
   position: absolute;
 }
+.focusable {
+  z-index: 9;
+}
 .react-draggable {
   background-color: white;
   border-radius: 0.5rem;
