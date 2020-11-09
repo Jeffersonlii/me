@@ -3,6 +3,8 @@
 .mainOS {
   width: 45rem;
   height: 30rem;
+  transition: width 0.5s;
+  transition: height 0.5s;
 }
 .OSbackground {
   display: flex;
@@ -11,8 +13,6 @@
   height: 100%;
   @extend .dotten-background;
   border: $lightBorder;
-  transition: width 0.5s;
-  transition: height 0.5s;
   box-shadow: inset 0 0 10rem 0 grey;
   animation: flicker 0.2s infinite;
   overflow: hidden;
@@ -68,7 +68,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .OSbackground {
+  .mainOS {
     width: 95vw;
     height: 95vh;
   }

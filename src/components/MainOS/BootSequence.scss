@@ -3,10 +3,19 @@
   height: 100%;
   background-color: black;
   position: absolute;
-  animation: fadeIn 5s;
+  animation: fadeIn 11s ease-out;
   opacity: 0;
   z-index: 999;
   pointer-events: none;
+  display: flex;
+  .initText {
+    color: white;
+    animation: typeText 10s ease-out;
+    text-align: initial;
+    margin: 2rem;
+    opacity: 0;
+    width: 100%;
+  }
 }
 .bootWrap {
   position: absolute;
@@ -24,18 +33,33 @@
 }
 @keyframes fadeIn {
   0% {
-    // pointer-events: all;
+    pointer-events: all;
+    cursor: progress;
     opacity: 1;
   }
   25% {
-    // pointer-events: all;
-    opacity: 0.8;
+    opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 1;
   }
   75% {
-    opacity: 0.2;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typeText {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
