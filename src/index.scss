@@ -22,6 +22,15 @@ body {
   -ms-user-select: text !important; /* Internet Explorer/Edge */
   user-select: text !important; /* Non-prefixed version, currently*/
   text-align: justify;
+  ::selection {
+    color: white;
+    background-color: black;
+  }
+  /* for firefox */
+  ::moz-selection {
+    color: white;
+    background-color: black;
+  }
 }
 //retro scroll bar styling
 ::-webkit-scrollbar,

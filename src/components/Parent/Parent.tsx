@@ -9,15 +9,13 @@ export default class  Parent extends React.Component<{},{activeWindows: any[], w
     super(props);
     this.state = {activeWindows: [], windowID: 0};
   }
+  audio = (new Audio("wn.mp3"));
 
+  toggleAudio = () => {
+    this.audio.play()
+    this.audio.volume = 0.1;
+  }
   openWindow = (child: React.ReactNode, params?: {[key:string]: any}) => {
-
-    // let audio = (new Audio("wn.mp3"));
-    // audio.play()
-    // audio.volume = 0.3;
-
-    //play audio on login
-
       this.setState({
           activeWindows: [
               ...this.state.activeWindows,
@@ -43,7 +41,6 @@ export default class  Parent extends React.Component<{},{activeWindows: any[], w
   render() {
     return (
       <div className="background" >
-
         <ReactPlayer 
         className="video"
           url={[
@@ -59,7 +56,7 @@ export default class  Parent extends React.Component<{},{activeWindows: any[], w
             forceVideo: true
           }
         }}/>
-        <MainOS openWindow={this.openWindow}></MainOS>
+        <MainOS openWindow={this.openWindow} toggleAudio={this.toggleAudio}></MainOS>
         {this.state.activeWindows}
       </div>
       )

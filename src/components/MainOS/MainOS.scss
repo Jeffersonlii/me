@@ -1,29 +1,23 @@
 @import '../../styles.scss';
 
-.fadein {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  animation: fadeIn 5s;
-  opacity: 0;
-  z-index: 999;
-  border-radius: 0.5rem 0.5rem 0 0;
-  pointer-events: none;
+.mainOS {
+  width: 45rem;
+  height: 30rem;
 }
 .OSbackground {
   display: flex;
   flex-direction: column;
-  width: 45rem;
-  height: 30rem;
+  width: 100%;
+  height: 100%;
   @extend .dotten-background;
-  overflow: hidden;
-  border-radius: 0.5rem;
   border: $lightBorder;
   transition: width 0.5s;
   transition: height 0.5s;
   box-shadow: inset 0 0 10rem 0 grey;
   animation: flicker 0.2s infinite;
+  overflow: hidden;
+  border-radius: inherit;
+
   .OSheader {
     cursor: pointer;
     display: flex;
@@ -62,26 +56,6 @@
   #desktop {
     position: relative;
     flex-grow: 9;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    // pointer-events: all;
-    opacity: 1;
-  }
-  25% {
-    // pointer-events: all;
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes flicker {

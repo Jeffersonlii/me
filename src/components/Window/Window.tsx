@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import Draggable from '../Draggable/CustomDraggable';
 import './Window.scss';
 export default function Window(props: any) {
+
     const width = props?.width ?? '30rem';
     const height = props?.height ?? '15rem';
 
