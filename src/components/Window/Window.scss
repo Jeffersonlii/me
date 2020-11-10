@@ -12,7 +12,6 @@
 }
 .header {
   border-bottom: $border;
-  cursor: pointer;
   position: relative;
   display: flex;
   .title {
@@ -29,7 +28,6 @@
     width: 0.8rem;
     height: 0.7rem;
     border: 1px black solid;
-    cursor: pointer;
     background-color: white;
     &:active {
       background-color: black;

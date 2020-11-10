@@ -19,12 +19,12 @@
   border-radius: inherit;
 
   .OSheader {
-    cursor: pointer;
     display: flex;
     background-color: white;
     border-bottom: $border;
 
     .link {
+      cursor: pointer;
       &.img {
         padding: 0rem;
       }
