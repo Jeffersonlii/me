@@ -39,6 +39,9 @@
   overflow-y: scroll;
   overflow-x: scroll;
   resize: both;
+  > div {
+    margin: 0.5rem;
+  }
 }
 
 .lineWrap {

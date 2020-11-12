@@ -48,9 +48,10 @@ export default function Window(props: any) {
                 <HeaderLines></HeaderLines>
             </div>
             <div className="infoHeader"></div>
-            <Contents className="contents"
-            >   
-                {props.children}    
+            <Contents className="contents">
+                <div>
+                    {props.children}    
+                </div>
             </Contents>
         </div>
     </Draggable>);
