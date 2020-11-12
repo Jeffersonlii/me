@@ -22,36 +22,6 @@
     display: flex;
     background-color: white;
     border-bottom: $border;
-
-    .link {
-      cursor: pointer;
-      &.img {
-        padding: 0rem;
-      }
-      padding: 0 0.5rem;
-      & .img {
-        padding: none;
-        width: 2rem;
-        display: flex;
-        justify-content: center;
-        & img {
-          height: 1.2rem;
-          object-fit: cover;
-          margin-top: 0.08rem;
-        }
-        filter: none;
-        &:hover {
-          filter: invert(1);
-        }
-      }
-      &:hover {
-        background-color: black;
-        color: white;
-      }
-      &:first-of-type {
-        margin-left: 1rem;
-      }
-    }
   }
   #desktop {
     position: relative;

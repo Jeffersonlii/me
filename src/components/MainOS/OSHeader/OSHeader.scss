@@ -1,0 +1,59 @@
+@import '../../../styles.scss';
+
+.link {
+  position: relative;
+  &.img {
+    padding: 0rem;
+  }
+  & .img {
+    padding: none;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    & img {
+      height: 1.2rem;
+      object-fit: cover;
+      margin-top: 0.08rem;
+    }
+    filter: none;
+    &:hover {
+      filter: invert(1);
+    }
+  }
+  padding: 0 0.5rem;
+
+  &:first-of-type {
+    margin-left: 1rem;
+  }
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  .panel {
+    position: absolute;
+    width: 10rem;
+    border-top: $lightBorder;
+    border-right: $border;
+    border-bottom: $border;
+    border-left: $lightBorder;
+    background-color: white;
+    margin-top: 1px;
+    left: 0rem;
+
+    .option {
+      color: black;
+      text-align: left;
+      padding-left: 1rem;
+      &:hover {
+        color: white;
+        background: black;
+      }
+      &.disabled {
+        color: grey;
+        pointer-events: none;
+      }
+    }
+
+    z-index: 9;
+  }
+}
