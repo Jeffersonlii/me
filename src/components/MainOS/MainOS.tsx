@@ -1,12 +1,45 @@
 import React, { useState } from 'react';
-import TypeIt from "typeit-react";
 import Draggable from '../Draggable/CustomDraggable';
 import logo from './../../public/appLogo.png';
+import { BootSequence, BootText } from './BootSequence';
 import './BootSequence.scss';
+import Dropdown from './Dropdown/Dropdown';
 import './MainOS.scss';
 import DesktopFiles from './Pages/Pages';
 
 export default function MainOS (props: any) {
+    let dropDownStatics = [{
+                label: 'File',
+                options: [{
+                    option: 'lol xd'
+                    }]
+                },
+                {
+                    label: 'Edit',
+                    options: [{
+                        option: 'lol xd'
+                    }]
+                },
+                {
+                    label: 'View',
+                    options: [{
+                        option: 'lol xd'
+                    }]
+                },
+                {
+                    label: 'Special',
+                    options: [{
+                        option: 'lol xd'
+                    }]
+                }
+            ]
+    let dropdowns = dropDownStatics.map((el, index)=>{
+            return {...el, id: index, options: 
+                el.options.map((op, index)=>({...op, id: index})
+            )}
+        })
+    
+
     const onClickBoot = () =>{
         setBodyComp(
         <>
@@ -21,18 +54,8 @@ export default function MainOS (props: any) {
                         <img src={logo} alt="apple logo" />
                     </div>
                 </div>
-                <div className="link">
-                    File
-                </div>
-                <div className="link">
-                    Edit
-                </div>
-                <div className="link">
-                    View
-                </div>
-                <div className="link">
-                    Special
-                </div>
+                <Dropdown labels={dropdowns}
+                ></Dropdown>
                 <div style={{ flexGrow: 9 }}></div>
             </div>
             <div id="desktop">
@@ -58,42 +81,3 @@ export default function MainOS (props: any) {
     </Draggable>);   
 }
 
-function BootSequence(props: {onClickBoot: ()=>any}){
-    document.addEventListener('keydown', props.onClickBoot);
-
-    return (
-    <div className="bootWrap"  onClick={props.onClickBoot}>
-        <div className="initButton">PRESS ANY KEY TO BOOT FROM CD OR DVD....</div>
-    </div>)
-}
-
-function BootText(){
-    return <TypeIt
-        options={{ speed: 1 }}
-        getBeforeInit={(instance: any) => {
-            instance
-            .type("COMPBIO (C) 1991 MOTHERBOARD. INC.")
-            .pause(50)
-            .break()
-            .type("BIOS DATE 09/29/91 15:43:29 VER: 08.00.15")
-            .pause(50)
-            .break()
-            .type("CPU: INTEL(R) CPU 330 @40MHZ")
-            .pause(50)
-            .break()
-            .type("SPEED: 40MHZ")
-            .pause(50)
-            .break()
-            .type("THIS VGA/PCI BIOS IS RELEASED UNDER THE GNU LGPL")
-            .pause(50)
-            .break()
-            .type("64-1001-100001010100-12995-1AE23EV003-Y30C")
-            .pause(50)
-            .break()
-            .type("BOOTING FROM HARD DISK")
-            .pause(50)
-            .type(". . .", {speed: 400})
-            return instance;
-        }}
-    />
-}

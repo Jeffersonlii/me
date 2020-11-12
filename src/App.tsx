@@ -6,7 +6,7 @@ export default class App extends React.Component<any, any>{
   constructor(props: any){
     super(props)
 
-    let replacementComp = (a: boolean) => a ? <div id="warning"> Best Viewed on Desktop !</div> : <></>
+    let replacementComp = (a: boolean) => a ? <div id="warning"> Best Experienced on Desktop !</div> : <></>
     this.state = { mobile: replacementComp(window.matchMedia("(max-width: 800px)").matches)};
     let handleEvent = (e: any)=>{
       this.setState({...App, mobile : replacementComp(e.matches)})
