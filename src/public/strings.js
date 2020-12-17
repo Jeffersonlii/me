@@ -4,9 +4,9 @@ export default {
   "paragraph": [
     "Hi!, My name is Jefferson Li. <br><br>",
     "I am a <b>Full Stack Developer</b> specializing in Angular, with a focus in building scalable and responsive software ( try to break this site 😉 ). <br> <br> ",
-    "Previously at <a href='https://temerityanalytics.com/' target='_blank'><b class='font-tertiary link' > Temerity Analytics</b></a>. <br>",
+    "Previously at <a href='https://temerityanalytics.com/' target='_blank'><b>Temerity Analytics</b></a>.<br>",
     "Currently pursuing a specialist in <b>Software Engineering</b> and a minor in <b>Statistics</b> at the ",
-    "<a href='https://www.utoronto.ca' target='_blank'> <b class='font-tertiary-bold link' > University of Toronto </b></a >(2023)<br><br>",
+    "<a href='https://www.utoronto.ca' target='_blank'><b> University of Toronto </b></a>(2023)<br><br>",
     "I love going to the <b>gym</b>, <b>badminton</b> and <b>photography</b>, I also love to create and bringing <b>user friendly</b> and <b>responsive design</b> to life!"
   ],
   "qualifications": {
@@ -186,20 +186,13 @@ export default {
       }
     }
   },
-  "toasts": {
-    "work": "Displaying Work Experience",
-    "projects": "Displaying Projects",
-    "both": "Displaying Work Experience and Projects",
-    "none": ""
-  },
-  "footer text": {
-    "btn-text": "Work With Me!",
-    "fun": "Developed During Quarantine by Jefferson Li.",
-    "chrome": "Best Viewed On Chrome",
-    "notfun": "©2020 Jefferson Li. All rights reserved."
-  },
+  "credits": [
+    "Developed with 🌮 by Jefferson Li <br/><br/>",
+    "Built using React with <a href='https://www.npmjs.com/package/react-draggable' target='_blank'><b>react-draggable</b></a><br/><br/>",
+    "Best Viewed On Chrome<br/>",
+    "©2020 Jefferson Li. All rights reserved."
+  ],
   "socials": {
-    "Resume": { "link": "../../../assets/resume.pdf", "desc": "See My Resume" },
     "LinkedIn": {
       "link": "https://www.linkedin.com/in/jeffersonlii/",
       "desc": "See My Experience"
@@ -213,8 +206,4 @@ export default {
       "desc": "See My Photography"
     }
   },
-  "dialog": {
-    "dialog-close": "close.",
-    "dialog-source": "Click to Open Source"
-  }
 }

@@ -13,7 +13,7 @@
     '. . . . . skls'
     '. . . . . .'
     '. . . . . res'
-    '. . . . . .';
+    '. . . . . creds';
 
   .file {
     margin: 1rem;
@@ -37,5 +37,8 @@
   }
   #res {
     grid-area: res;
+  }
+  #creds {
+    grid-area: creds;
   }
 }
