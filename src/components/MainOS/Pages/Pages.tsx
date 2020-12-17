@@ -9,10 +9,14 @@ export default  function DesktopFiles(props: any){
               return props.openWindow(<Me></Me>, {
                   header:"JEFFERSON_LI_INTRO.TXT",
                   width: '38rem', height: '18rem'});
+            case 'Rand':
+                return props.openWindow(<Rand></Rand>, {
+                    header:"MILK.GIF",
+                    width: '30rem', height: '20rem'});
             case 'Resume':
                 return props.openWindow(<Resume></Resume>, {
                     header:"RESUME.PDF",
-                    width: '38rem', height: '18rem'});
+                    width: '38rem', height: '52.5rem'});
             case 'Socials':
                 return props.openWindow(<Socials></Socials>, {
                     header:"SOCIALS.TXT",
@@ -30,8 +34,8 @@ export default  function DesktopFiles(props: any){
             <div className="file" id="exp">
                 EXPERIENCES<br></br>.TXT
             </div>
-            <div className="file" id="dog">
-                DOGGY.GIF
+            <div className="file" id="rand"  onClick ={()=>openWindow("Rand")}>
+                MILK.GIF
             </div>
             <div className="file" id="skl">
                 SKILLS.TXT
@@ -52,6 +56,9 @@ export default  function DesktopFiles(props: any){
 function Me(){
     return (
     <div dangerouslySetInnerHTML={{ __html: json.paragraph.join('') }}/>)
+}
+function Rand(){
+    return (<img src="gifs/funny_cow.gif" id="rand-gif" alt="funny cow gif" /> )
 }
 function Resume(){
     return <>

@@ -9,7 +9,7 @@
 
   grid-template-areas:
     '. . . .  me . '
-    '. . . . exp dog'
+    '. . . . exp rand'
     '. . . . . skls'
     '. . . . . .'
     '. . . . . res'
@@ -29,8 +29,8 @@
   #exp {
     grid-area: exp;
   }
-  #dog {
-    grid-area: dog;
+  #rand {
+    grid-area: rand;
   }
   #skl {
     grid-area: skls;
@@ -41,4 +41,9 @@
   #creds {
     grid-area: creds;
   }
+}
+
+#rand-gif {
+  width: 100%;
+  height: 100%;
 }

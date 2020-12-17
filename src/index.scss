@@ -23,6 +23,7 @@ body {
   -ms-user-select: text !important; /* Internet Explorer/Edge */
   user-select: text !important; /* Non-prefixed version, currently*/
   text-align: justify;
+  height: 100%;
   ::selection {
     color: white;
     background-color: black;
