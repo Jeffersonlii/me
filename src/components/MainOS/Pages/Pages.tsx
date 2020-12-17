@@ -1,7 +1,6 @@
 import React from "react";
 import json from '../../../public/strings';
 import './Pages.scss';
-import { Document, Page } from 'react-pdf'
 
 export default  function DesktopFiles(props: any){
     let openWindow = (key: string) => {
