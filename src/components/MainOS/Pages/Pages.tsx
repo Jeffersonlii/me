@@ -13,6 +13,10 @@ export default  function DesktopFiles(props: any){
                 return props.openWindow(<Rand></Rand>, {
                     header:"MILK.GIF",
                     width: '30rem', height: '20rem'});
+            case 'Skills':
+                return props.openWindow(<Skills></Skills>, {
+                    header:"SKILLS.TXT",
+                    width: '50rem', height: '40rem'});
             case 'Resume':
                 return props.openWindow(<Resume></Resume>, {
                     header:"RESUME.PDF",
@@ -28,25 +32,25 @@ export default  function DesktopFiles(props: any){
 
     return (
         <div className="desktop-files">
-            <div className="file" id="me" onClick ={()=>openWindow("Me")}>
+            <div className="file" id="me" onClick={()=>openWindow("Me")}>
                 JEFFERSON_LI<br></br>_INTRO.TXT
             </div>
             <div className="file" id="exp">
                 EXPERIENCES<br></br>.TXT
             </div>
-            <div className="file" id="rand"  onClick ={()=>openWindow("Rand")}>
+            <div className="file" id="rand" onClick={()=>openWindow("Rand")}>
                 MILK.GIF
             </div>
-            <div className="file" id="skl">
+            <div className="file" id="skl" onClick={()=>openWindow("Skills")}>
                 SKILLS.TXT
             </div>
             <div className="file" id="gme">
                 TODO_<br></br>GAME.exe
             </div>
-            <div className="file" id="res" onClick ={()=>openWindow("Resume")}>
+            <div className="file" id="res" onClick={()=>openWindow("Resume")}>
                 RESUME.PDF
             </div>
-            <div className="file" id="creds" onClick ={()=>openWindow("Socials")}>
+            <div className="file" id="creds" onClick={()=>openWindow("Socials")}>
                 SOCIALS.TXT
             </div>
         </div>
@@ -65,6 +69,34 @@ function Resume(){
     <embed src= "pdfs/resume.pdf" type="application/pdf" width="100%"height="800"></embed>
       </>
 }
+function Skills(){
+    const skillsInnertext = []
+
+    for (const [skillGroup, skills] of Object.entries(json.qualifications["Technical Skills"])) {
+        const innerskills = []
+        for(const [skill, desc] of Object.entries(skills)){
+            innerskills.push(
+            ` 
+            <div id="skill-name">${skill}</div>
+            <div id="skill-desc">${desc}</div>
+            <br>
+            `)
+        }
+        const innergroup = `<div id="skills-wrap">
+            <b>${skillGroup}</b>
+            <br>
+            ${innerskills.join('')}
+            <br>
+        </div>` 
+
+        skillsInnertext.push(
+            <div dangerouslySetInnerHTML={{ __html: innergroup }}/>
+        )
+    }
+    return (<>
+    {skillsInnertext}
+    </>)
+}
 function Socials(){
     const socialsInnertext = []
 
@@ -80,6 +112,5 @@ function Socials(){
     return (<>
     {socialsInnertext}
     <div dangerouslySetInnerHTML={{ __html: json.credits.join('') }}/>
-
     </>)
 }

@@ -47,3 +47,14 @@
   width: 100%;
   height: 100%;
 }
+#skills-wrap {
+  display: flex;
+  flex-direction: column;
+
+  #skill-name {
+    margin-left: 2rem;
+  }
+  #skill-desc {
+    margin-left: 4rem;
+  }
+}

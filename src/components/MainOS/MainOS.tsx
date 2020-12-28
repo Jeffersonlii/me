@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Draggable from '../Draggable/CustomDraggable';
-import { BootSequence, BootText } from './BootSequence';
+import { BootSequence } from './BootSequence';
 import './BootSequence.scss';
 import './MainOS.scss';
 import OSHeader from './OSHeader/OSHeader';

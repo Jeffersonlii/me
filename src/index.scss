@@ -14,6 +14,9 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently*/
 }
+pre {
+  font-family: 'ChigacoFLF';
+}
 .selectable {
   //disables all text selection, makes dragging very smooth
   -webkit-touch-callout: text !important; /* iOS Safari */

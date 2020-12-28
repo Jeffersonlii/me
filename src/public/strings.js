@@ -1,4 +1,6 @@
 
+const skillDescNewLineSpacing = '        ';
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   "paragraph": [
@@ -13,23 +15,21 @@ export default {
     "Technical Skills": {
       "Web": {
         "HTML/CSS/JS": "Created a number of sites using HTML/CSS/JS, including this one!",
-        "Angular/RxJS": "Worked with an Angular frontend during my time as a fullstack developer at Termerity Analytics",
-        "Django/Django REST framwork": "Worked with the Django REST framwork backend during my time as a fullstack developer at Termerity Analytics",
-        "Flask": "Used Flask as backend for 'where am I' webapp",
+        "Angular": "Worked with an Angular frontend during my time as a fullstack developer at Termerity Analytics",
+        "React": "Learned independently using official documentations and developed this personal portfolio using React",
+        "Django/Django REST framwork/Django ORM": "Worked with the Django REST framwork backend during my time as a fullstack developer at Termerity Analytics",
+        "Flask": "Used Flask to create numerous REST apis as well as server side rendered webapps",
         "SQL/PostgreSQL/SQLite": "Utilized PostgreSQL during my time as a fullstack developer at Termerity Analytics",
-        "Asyncronous / Reactive Programming": "Experienced in building large structured projects using Redux state",
-        "Amazon Web Service": "",
-        "Firebase": "Used firebase to host this very site!"
+        "RxJS": "Experienced with writing involved asynchronous pipes using the RxJS library to handle backend data",
+        "Redux/NgRx": `Used the Redux/NgRx archetecture in numerous projects to handle local state.<br>Achieved optimal data fetching with the Action/Reducer/Effects architecture`
       },
       "General": {
         "C": "Achived 93% in C based programming course at UofT",
-        "Python": "",
-        "JS / Typescript": "8 Month proffessional experience building numerous features using JS/TS during my time as at Termerity Analytics",
-        "Java": "",
-        "Shell/Bash": "",
-        "SVN": "",
-        "GIT": "Used during my work as a fullstack developer, profficient in resolving conflicts and researching solutions to complex issues",
-        "Agile": ""
+        "Python/NumPy": `4+ years of python writing numerous scripts<br>Developed numerous machine learning algorithms in school, used NumPy for matrix algebra`,
+        "JS/Typescript": "8 Month proffessional experience building numerous features using JS/TS during my time as at Termerity Analytics",
+        "Java": "Built numerous android apps and REST apis using Java",
+        "GIT": `Used during my work as a fullstack developer, as well as all of my personal projects.<br>Profficient in resolving conflicts and researching solutions to complex issues regarding git`,
+        "Agile": "Followed an Agile development process during my work at Termerity Analytics"
       },
       "Testing": {
         "Jasmine/Karma": "Used to test front end Angular code duing my time as a fullstack developer for Termerity Analytics ",
@@ -57,7 +57,6 @@ export default {
       "Swimming": "",
       "Weight Training ": "",
       "Photography": "Check out my Instagram!",
-      "<canvas></canvas>": ""
     }
   },
   "projects": {
