@@ -13,9 +13,7 @@ export default class App extends React.Component<any, any>{
     }
     window.matchMedia("(max-width: 800px)").addEventListener("change", handleEvent);
   }
-  componentDidMount() {
-    document.title = "Jefferson Li";
-  }
+
   render(){
      return(
       <div className="App">
