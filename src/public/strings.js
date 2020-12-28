@@ -48,10 +48,6 @@ export default {
       "Software Engineering Specialist, Statistics Minor": "",
       "GPA: 3.82/4.0": ""
     },
-    "Award": {
-      "UofT Dean’s Scholarships": "Awarded to students with 3.5+ GPA with a full course load",
-      "UofT Entrance Scholarship ($1.5k)": "Awarded to applicants with 90+ highschool average"
-    },
     "Interests and Hobbies": {
       "Badminton": "",
       "Swimming": "",
