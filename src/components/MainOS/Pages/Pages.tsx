@@ -1,8 +1,9 @@
 import React from "react";
 import json from '../../../public/strings';
 import './Pages.scss';
+import ExperiencePage from "./ExperiencePage";
 
-export default  function DesktopFiles(props: any){
+export default function DesktopFiles(props: any){
     let openWindow = (key: string) => {
         switch(key) {
             case 'Me':
@@ -10,7 +11,7 @@ export default  function DesktopFiles(props: any){
                   header:"JEFFERSON_LI_INTRO.TXT",
                   width: '38rem', height: '18rem'});
             case 'Exp':
-                    return props.openWindow(<Exp></Exp>, {
+                    return props.openWindow(<ExperiencePage openWindow={props.openWindow}></ExperiencePage>, {
                     header:"EXPERIENCES.TXT",
                     width: '38rem', height: '18rem'});
             case 'Rand':
@@ -61,9 +62,6 @@ export default  function DesktopFiles(props: any){
 function Me(){
     return (
     <div dangerouslySetInnerHTML={{ __html: json.paragraph.join('') }}/>)
-}
-function Exp(){
-    return <></>
 }
 function Rand(){
     return (<img src="gifs/funny_cow.gif" id="rand-gif" alt="funny cow gif" /> )

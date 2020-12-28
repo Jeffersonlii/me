@@ -1,0 +1,11 @@
+#exp-body {
+  margin: 1rem 0 0 1rem;
+}
+#link {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}

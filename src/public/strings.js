@@ -56,41 +56,11 @@ export default {
     }
   },
   "projects": {
-    "Where Am I?": {
-      "desc": "Location Sharing Web App",
-      "link": "https://github.com/Jeffersonlii/Where-Am-I-",
-      "pic": "../../assets/projects-and-work/whereami/logo.png",
-      "time": ["08/01/2019"],
-      "modal_details": {
-        "Goal": [
-          "To develop an app that allows users to sharer their location through a single link",
-          "Motivated by when I wanted to share my location with my parents, who did not use social media.",
-          "I realized there was not a tool that can painlessly share location, I decided to create one",
-          "The key feature of this project is its simplicity, sharing through a link implies no downloading, no signup, just sharing."
-        ],
-        "My Tasks": [
-          "Used Python (flask) for backend, to update and retrieve user coordinates using a SQL database",
-          "Generates link for every user, for sharing unique locations",
-          "Used Ajax to pass coordinate data from Python to JS and vice versa"
-        ],
-        "Result": ["Gained experience in Google API and AJAX calls"],
-        "detail_pics": [
-          {
-            "url": "../../assets/projects-and-work/whereami/1st.PNG",
-            "desc": "Shared link page"
-          },
-          {
-            "url": "../../assets/projects-and-work/whereami/2nd.PNG",
-            "desc": "Map Page"
-          }
-        ]
-      }
-    },
     "Personal Website": {
       "desc": "You're looking at it",
       "link": "",
       "pic": "../../assets/projects-and-work/Personal-website/logo.png",
-      "time": ["04/01/2020"],
+      "time": "01/01/2021",
       "modal_details": {
         "Goal": [
           "To develope an extendable and responsive website showcasing my achivements and experiences"
@@ -117,7 +87,7 @@ export default {
       "desc": "Android Shopping App",
       "link": "",
       "pic": "../../assets/projects-and-work/Gold/logo.png",
-      "time": ["11/01/2019"],
+      "time": "11/01/2019",
       "modal_details": {
         "Goal": [
           "To develop a shopping android app with a 3 person team for a software design class",
@@ -144,6 +114,36 @@ export default {
           }
         ]
       }
+    },
+    "Where Am I?": {
+      "desc": "Location Sharing Web App",
+      "link": "https://github.com/Jeffersonlii/Where-Am-I-",
+      "pic": "../../assets/projects-and-work/whereami/logo.png",
+      "time": "08/01/2019",
+      "modal_details": {
+        "Goal": [
+          "To develop an app that allows users to sharer their location through a single link",
+          "Motivated by when I wanted to share my location with my parents, who did not use social media.",
+          "I realized there was not a tool that can painlessly share location, I decided to create one",
+          "The key feature of this project is its simplicity, sharing through a link implies no downloading, no signup, just sharing."
+        ],
+        "My Tasks": [
+          "Used Python (flask) for backend, to update and retrieve user coordinates using a SQL database",
+          "Generates link for every user, for sharing unique locations",
+          "Used Ajax to pass coordinate data from Python to JS and vice versa"
+        ],
+        "Result": ["Gained experience in Google API and AJAX calls"],
+        "detail_pics": [
+          {
+            "url": "../../assets/projects-and-work/whereami/1st.PNG",
+            "desc": "Shared link page"
+          },
+          {
+            "url": "../../assets/projects-and-work/whereami/2nd.PNG",
+            "desc": "Map Page"
+          }
+        ]
+      }
     }
   },
   "work exp": {
@@ -151,7 +151,7 @@ export default {
       "desc": "Full Stack Developer",
       "link": "https://temerityanalytics.com/",
       "pic": "../../assets/projects-and-work/temerity/logo.png",
-      "time": ["01/06/2020", "08/31/2020"],
+      "time": "01/06/2020 - 08/31/2020",
       "modal_details": {
         "Role": [
           "Fullstack developer, developing all aspects of Merln, our cloud based marketing analysis software"
