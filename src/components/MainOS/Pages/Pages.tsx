@@ -25,7 +25,7 @@ export default function DesktopFiles(props: any){
             case 'Resume':
                 return props.openWindow(<Resume></Resume>, {
                     header:"RESUME.PDF",
-                    width: '38rem', height: '52.5rem'});
+                    width: '38rem', height: '30rem'});
             case 'Socials':
                 return props.openWindow(<Socials></Socials>, {
                     header:"SOCIALS.TXT",
