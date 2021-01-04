@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Draggable from '../Draggable/CustomDraggable';
-import { BootSequence } from './BootSequence';
+import { BootSequence, BootText } from './BootSequence';
 import './BootSequence.scss';
 import './MainOS.scss';
 import OSHeader from './OSHeader/OSHeader';
@@ -10,11 +10,11 @@ export default function MainOS(props: any) {
   const onClickBoot = () => {
     setBodyComp(
       <>
-        {/* <div className="fadein">
-                <div className="initText">
-                    <BootText></BootText>
-                </div>
-            </div> */}
+        <div className="fadein">
+          <div className="initText">
+            <BootText></BootText>
+          </div>
+        </div>
         <div className="OSheader">
           <OSHeader></OSHeader>
           <div style={{ flexGrow: 9 }}></div>
