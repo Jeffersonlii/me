@@ -11,11 +11,11 @@ export default function MainOS (props: any) {
     const onClickBoot = () =>{
         setBodyComp(
         <>
-            <div className="fadein">
+            {/* <div className="fadein">
                 <div className="initText">
                     <BootText></BootText>
                 </div>
-            </div>
+            </div> */}
             <div className="OSheader">
                 <OSHeader></OSHeader>
                 <div style={{ flexGrow: 9 }}></div>

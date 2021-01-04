@@ -11,13 +11,13 @@
     '. . . .  me . '
     '. . . . exp rand'
     '. . . . . skls'
-    '. . . . . .'
     '. . . . . res'
     '. . . . . creds';
 
   .file {
     margin: 1rem;
     cursor: pointer;
+    word-break: initial;
     &:active {
       color: white;
       background-color: black;

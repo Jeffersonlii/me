@@ -1,11 +1,35 @@
-#exp-body {
-  margin: 1rem 0 0 1rem;
-}
 #link {
   cursor: pointer;
   margin-bottom: 1rem;
   &:hover {
     background-color: black;
     color: white;
+  }
+}
+#expanded-img {
+  width: 100%;
+}
+.img-grid {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  .img-btn {
+    width: 15rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    &:hover {
+      border: 5px solid grey;
+    }
+  }
+  & div {
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .img-grid {
+    grid-template-columns: 1fr;
   }
 }

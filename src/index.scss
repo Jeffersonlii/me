@@ -13,9 +13,8 @@ body {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently*/
-}
-pre {
-  font-family: 'ChigacoFLF';
+
+  word-break: break-all;
 }
 .selectable {
   //disables all text selection, makes dragging very smooth
