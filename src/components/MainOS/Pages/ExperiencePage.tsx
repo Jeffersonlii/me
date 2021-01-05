@@ -1,6 +1,6 @@
-import React from 'react';
-import json from '../../../public/strings';
-import './ExperiencePage.scss';
+import React from "react";
+import json from "../../../public/strings";
+import "./ExperiencePage.scss";
 
 export default function ExperiencePage(props: any) {
   const openExperience = (experienceName: string, experienceInfo: any) => {
@@ -11,16 +11,16 @@ export default function ExperiencePage(props: any) {
         openWindow={props.openWindow}
       ></ExperienceDetail>,
       {
-        header: `${experienceName.replace(/ /g, '_')}.HTML`,
-        width: '60rem',
-        height: '30rem',
+        header: `${experienceName.replace(/ /g, "_")}.HTML`,
+        width: "60rem",
+        height: "30rem",
       }
     );
   };
 
-  const experienceTypes: { key: 'work exp' | 'projects'; name: string }[] = [
-    { key: 'work exp', name: 'Work Experience' },
-    { key: 'projects', name: 'Personal Projects' },
+  const experienceTypes: { key: "work exp" | "projects"; name: string }[] = [
+    { key: "work exp", name: "Work Experience" },
+    { key: "projects", name: "Personal Projects" },
   ];
   return (
     <>
@@ -29,15 +29,15 @@ export default function ExperiencePage(props: any) {
           <>
             {name}
             <ul>
-              {Object.entries(json[key]).map((projectInfo) => {
+              {Object.entries(json[key]).map(([name, info]) => {
                 return (
                   <li
                     onClick={() => {
-                      openExperience(projectInfo[0], projectInfo[1]);
+                      openExperience(name, info);
                     }}
                   >
                     <div id="link">
-                      {projectInfo[0]} : {projectInfo[1].time}
+                      {name} : {info.time}
                     </div>
                   </li>
                 );
@@ -59,9 +59,9 @@ function ExperienceDetail(props: { name: string; info: any; openWindow: any }) {
         alt=""
       />,
       {
-        header: (imgDetail.url.split('/').pop() as string).toUpperCase(),
-        width: '30rem',
-        height: '100%',
+        header: (imgDetail.url.split("/").pop() as string).toUpperCase(),
+        width: "30rem",
+        height: "100%",
       }
     );
   };
@@ -72,13 +72,13 @@ function ExperienceDetail(props: { name: string; info: any; openWindow: any }) {
         {props.name} - {props.info.time}
       </h1>
       <section>{props.info.desc}</section>
-      {Object.keys(props.info['modal_details']).map((section) => {
+      {Object.keys(props.info["modal_details"]).map((section) => {
         return (
           <ul>
             <li>
               {section}
               <ul>
-                {props.info['modal_details'][section].map((point: string) => (
+                {props.info["modal_details"][section].map((point: string) => (
                   <li dangerouslySetInnerHTML={{ __html: point }} />
                 ))}
               </ul>
@@ -88,7 +88,7 @@ function ExperienceDetail(props: { name: string; info: any; openWindow: any }) {
       })}
       <section>Relevant Images</section>
       <div className="img-grid">
-        {props.info['images'].map((img: { url: string; desc: string }) => {
+        {props.info["images"].map((img: { url: string; desc: string }) => {
           return (
             <div>
               <ul>
@@ -100,7 +100,7 @@ function ExperienceDetail(props: { name: string; info: any; openWindow: any }) {
                     openImage(img);
                   }}
                 />
-                <li style={{ width: '15rem' }}>{img.desc}</li>
+                <li style={{ width: "15rem" }}>{img.desc}</li>
               </ul>
             </div>
           );

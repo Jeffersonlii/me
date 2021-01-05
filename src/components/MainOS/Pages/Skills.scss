@@ -1,0 +1,33 @@
+.host {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-areas:
+    'skills skills skills edu '
+    'skills skills skills interests'
+    'skills skills skills interests'
+    'skills skills skills interests'
+    'skills skills skills interests'
+    'skills skills skills interests';
+  grid-gap: 0.5rem;
+
+  #skills {
+    grid-area: skills;
+    overflow-y: auto;
+  }
+  #edu {
+    grid-area: edu;
+  }
+  #interests {
+    grid-area: interests;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .host {
+    grid-template-areas:
+      'skills'
+      'edu'
+      'interests';
+  }
+}
