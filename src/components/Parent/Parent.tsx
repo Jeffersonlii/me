@@ -9,18 +9,38 @@ import { Subscription } from 'rxjs';
 
 export default class Parent extends React.Component<
   {},
-  { activeWindows: any[]; windowID: number; openOS: boolean }
+  {
+    activeWindows: any[];
+    windowID: number;
+    openOS: boolean;
+    openVideo: boolean;
+  }
 > {
   constructor(props: {} | Readonly<{}>) {
     super(props);
-    this.state = { activeWindows: [], windowID: 0, openOS: true };
+    this.state = {
+      activeWindows: [],
+      windowID: 0,
+      openOS: true,
+      openVideo: true,
+    };
   }
+  audio = new Audio('wn.mp3');
 
   subs = new Subscription();
   componentDidMount() {
     //set up all subject listeners
-
-    this.subs.add(service.$audioToggle.subscribe(this.toggleAudio));
+    this.subs.add(
+      service.$audioToggle.subscribe(() => {
+        this.audio.play();
+        this.audio.volume = this.audio.volume === 0 ? 0.2 : 0;
+      })
+    );
+    this.subs.add(
+      service.$videoToggle.subscribe(() => {
+        this.setState({ ...this.state, openVideo: !this.state.openVideo });
+      })
+    );
     this.subs.add(
       service.$removeAllWindows.subscribe(() => {
         this.setState({
@@ -62,13 +82,6 @@ export default class Parent extends React.Component<
     this.subs.unsubscribe();
   }
 
-  audio = new Audio('wn.mp3');
-
-  toggleAudio = () => {
-    this.audio.play();
-    this.audio.volume = 0.1;
-  };
-
   onCloseWindow = (id: any) => {
     this.setState({
       activeWindows: this.state.activeWindows.filter(
@@ -76,25 +89,26 @@ export default class Parent extends React.Component<
       ),
     });
   };
-
   render() {
     return (
       <div className="background">
-        <ReactPlayer
-          className="video"
-          url={[{ src: 'bg.mp4', type: 'video/webm' }]}
-          loop
-          volume={0}
-          muted
-          playing
-          width="100%"
-          height="100%"
-          config={{
-            file: {
-              forceVideo: true,
-            },
-          }}
-        />
+        {this.state.openVideo && (
+          <ReactPlayer
+            className="video"
+            url={[{ src: 'bg.mp4', type: 'video/webm' }]}
+            loop
+            volume={0}
+            muted
+            playing
+            width="100%"
+            height="100%"
+            config={{
+              file: {
+                forceVideo: true,
+              },
+            }}
+          />
+        )}
         {this.state.openOS && <MainOS></MainOS>}
         {this.state.activeWindows}
       </div>
