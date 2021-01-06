@@ -1,38 +1,72 @@
 // import vid from 'bg.mp4';
-import React from "react";
-import ReactPlayer from "react-player";
-import MainOS from "../MainOS/MainOS";
-import Window from "../Window/Window";
-import "./Parent.scss";
+import React from 'react';
+import ReactPlayer from 'react-player';
+import MainOS from '../MainOS/MainOS';
+import Window from '../Window/Window';
+import './Parent.scss';
+import * as service from './ParentService';
+import { Subscription } from 'rxjs';
+
 export default class Parent extends React.Component<
   {},
-  { activeWindows: any[]; windowID: number }
+  { activeWindows: any[]; windowID: number; openOS: boolean }
 > {
   constructor(props: {} | Readonly<{}>) {
     super(props);
-    this.state = { activeWindows: [], windowID: 0 };
+    this.state = { activeWindows: [], windowID: 0, openOS: true };
   }
-  audio = new Audio("wn.mp3");
+
+  subs = new Subscription();
+  componentDidMount() {
+    //set up all subject listeners
+
+    this.subs.add(service.$audioToggle.subscribe(this.toggleAudio));
+    this.subs.add(
+      service.$removeAllWindows.subscribe(() => {
+        this.setState({
+          ...this.state,
+          activeWindows: [],
+          windowID: 1,
+        });
+      })
+    );
+    this.subs.add(
+      service.$openWindow.subscribe(
+        (_: { child: React.ReactNode; params?: { [key: string]: any } }) => {
+          this.setState({
+            ...this.state,
+            activeWindows: [
+              ...this.state.activeWindows,
+              <Window
+                {..._.params}
+                key={this.state.windowID}
+                windowID={this.state.windowID}
+                onCloseWindow={this.onCloseWindow}
+              >
+                <div className="selectable">{_.child}</div>
+              </Window>,
+            ],
+            windowID: this.state.windowID + 1,
+          });
+        }
+      )
+    );
+    this.subs.add(
+      service.$toggleOS.subscribe(() => {
+        this.setState({ ...this.setState, openOS: !this.state.openOS });
+      })
+    );
+  }
+  componentWillUnmount() {
+    // unsubscribe to ensure no memory leaks
+    this.subs.unsubscribe();
+  }
+
+  audio = new Audio('wn.mp3');
 
   toggleAudio = () => {
     this.audio.play();
     this.audio.volume = 0.1;
-  };
-  openWindow = (child: React.ReactNode, params?: { [key: string]: any }) => {
-    this.setState({
-      activeWindows: [
-        ...this.state.activeWindows,
-        <Window
-          {...params}
-          key={this.state.windowID}
-          windowID={this.state.windowID}
-          onCloseWindow={this.onCloseWindow}
-        >
-          <div className="selectable">{child}</div>
-        </Window>,
-      ],
-      windowID: this.state.windowID + 1,
-    });
   };
 
   onCloseWindow = (id: any) => {
@@ -42,12 +76,13 @@ export default class Parent extends React.Component<
       ),
     });
   };
+
   render() {
     return (
       <div className="background">
         <ReactPlayer
           className="video"
-          url={[{ src: "bg.mp4", type: "video/webm" }]}
+          url={[{ src: 'bg.mp4', type: 'video/webm' }]}
           loop
           volume={0}
           muted
@@ -60,10 +95,7 @@ export default class Parent extends React.Component<
             },
           }}
         />
-        <MainOS
-          openWindow={this.openWindow}
-          toggleAudio={this.toggleAudio}
-        ></MainOS>
+        {this.state.openOS && <MainOS></MainOS>}
         {this.state.activeWindows}
       </div>
     );

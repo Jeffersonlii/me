@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import "../MainOS.scss";
-import logo from "./../../../public/appLogo.png";
-import "./OSHeader.scss";
+import React, { useState } from 'react';
+import '../MainOS.scss';
+import logo from './../../../public/appLogo.png';
+import './OSHeader.scss';
+import * as service from '../../Parent/ParentService';
 
 export interface DropDownLabel {
   label: string;
@@ -9,78 +10,89 @@ export interface DropDownLabel {
   options: {
     option: string;
     id: number;
+    onClick: () => any;
     disabled?: boolean;
   }[];
 }
 
 export default function OSHeader(props: any) {
   let dropDownStatics = [
+    // static dropdown definitions
     {
-      label: "File",
+      label: 'File',
       options: [
         {
-          option: "New",
+          option: 'New',
           disabled: true,
         },
         {
-          option: "Open",
+          option: 'Open',
           disabled: true,
         },
         {
-          option: "Get Info",
+          option: 'Get Info',
+          disabled: true,
         },
         {
-          option: "Close",
+          option: 'Close',
+          onClick: () => {
+            service.$toggleOS.next();
+          },
         },
       ],
     },
     {
-      label: "Edit",
+      label: 'Edit',
       options: [
         {
-          option: "Cut",
+          option: 'Cut',
           disabled: true,
         },
         {
-          option: "Copy",
+          option: 'Copy',
           disabled: true,
         },
         {
-          option: "Paste",
+          option: 'Paste',
           disabled: true,
         },
         {
-          option: "Clear",
+          option: 'Clear',
           disabled: true,
         },
         {
-          option: "Select All",
+          option: 'Select All',
           disabled: true,
         },
       ],
     },
     {
-      label: "View",
+      label: 'View',
       options: [
         {
-          option: "Toggle Audio",
+          option: 'Toggle Audio',
         },
         {
-          option: "Toggle Audio",
+          option: 'Toggle Video',
         },
       ],
     },
     {
-      label: "Special",
+      label: 'Special',
       options: [
         {
-          option: "Clean Up",
+          option: 'Clean Up',
+          onClick: () => {
+            service.$removeAllWindows.next();
+          },
         },
         {
-          option: "Erase Disk",
+          option: 'Erase Disk',
+          disabled: true,
         },
         {
-          option: "Show Hidden Folders",
+          option: 'Show Hidden Folders',
+          disabled: true,
         },
       ],
     },
@@ -88,23 +100,26 @@ export default function OSHeader(props: any) {
   let dropdowns: DropDownLabel[] = dropDownStatics.map((el, index) => {
     return {
       ...el,
-      id: index,
-      options: el.options.map((op, index) => ({
-        ...op,
-        id: index,
-        disabled: op.disabled ?? false,
-      })),
+      id: index, // attach id to labels
+      options: (el.options as any).map((op: any, index: any) => {
+        return {
+          ...op,
+          id: index, // attach id to options of labels
+          disabled: op.disabled ?? false, // fill in disabled key
+          onClick: op.onClick ?? undefined, //fill in disabled onclick func
+        };
+      }),
     };
   });
 
   const [group, setGroup] = useState(
-    dropdowns.map((a) => ({ ...a, opened: false }))
+    dropdowns.map((a) => ({ ...a, opened: false })) //attached a 'opened' flag
   );
 
-  let onToggle = (id: number, action: "enter" | "leave") => {
+  let onToggle = (id: number, action: 'enter' | 'leave') => {
     setGroup(
       group.map((a) => {
-        if (a.id === id) return { ...a, opened: action === "enter" };
+        if (a.id === id) return { ...a, opened: action === 'enter' };
         return a;
       })
     );
@@ -121,8 +136,8 @@ export default function OSHeader(props: any) {
           <div
             className="link"
             key={label.id}
-            onMouseOver={(e) => onToggle(label.id, "enter")}
-            onMouseLeave={(e) => onToggle(label.id, "leave")}
+            onMouseOver={(e) => onToggle(label.id, 'enter')}
+            onMouseLeave={(e) => onToggle(label.id, 'leave')}
           >
             {label.label}
             {(() => {
@@ -144,7 +159,7 @@ function DropPanel(props: { label: DropDownLabel }) {
             {op.option}
           </div>
         ) : (
-          <div className="option" key={op.id}>
+          <div className="option" key={op.id} onClick={op.onClick}>
             {op.option}
           </div>
         );
