@@ -1,4 +1,3 @@
-// import vid from 'bg.mp4';
 import React from 'react';
 import ReactPlayer from 'react-player';
 import MainOS from '../MainOS/MainOS';
@@ -14,6 +13,7 @@ export default class Parent extends React.Component<
     windowID: number;
     openOS: boolean;
     openVideo: boolean;
+    audioOptions: { init: boolean; vol: number };
   }
 > {
   constructor(props: {} | Readonly<{}>) {
@@ -23,17 +23,21 @@ export default class Parent extends React.Component<
       windowID: 0,
       openOS: true,
       openVideo: true,
+      audioOptions: { init: false, vol: 0 },
     };
   }
-  audio = new Audio('wn.mp3');
-
   subs = new Subscription();
   componentDidMount() {
     //set up all subject listeners
     this.subs.add(
       service.$audioToggle.subscribe(() => {
-        this.audio.play();
-        this.audio.volume = this.audio.volume === 0 ? 0.2 : 0;
+        this.setState({
+          ...this.state,
+          audioOptions: {
+            init: true,
+            vol: this.state.audioOptions.vol === 0 ? 0.2 : 0,
+          },
+        });
       })
     );
     this.subs.add(
@@ -92,6 +96,20 @@ export default class Parent extends React.Component<
   render() {
     return (
       <div className="background">
+        {this.state.audioOptions.init && (
+          <ReactPlayer
+            className="bgaudio"
+            url={[{ src: 'wn.mp3', type: 'audio/mpeg' }]}
+            loop
+            playing={true}
+            volume={this.state.audioOptions.vol}
+            config={{
+              file: {
+                forceAudio: true,
+              },
+            }}
+          />
+        )}
         {this.state.openVideo && (
           <ReactPlayer
             className="video"

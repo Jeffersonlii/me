@@ -16,7 +16,6 @@ export interface DropDownLabel {
 }
 
 export default function OSHeader(props: any) {
-  service.$audioToggle.next();
   let dropDownStatics = [
     // static dropdown definitions
     {

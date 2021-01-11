@@ -5,9 +5,11 @@ import './BootSequence.scss';
 import './MainOS.scss';
 import OSHeader from './OSHeader/OSHeader';
 import DesktopFiles from './Pages/Pages';
+import * as service from '../Parent/ParentService';
 
 export default function MainOS(props: any) {
   const onClickBoot = () => {
+    service.$audioToggle.next();
     setBodyComp(
       <>
         <div className="fadein">
