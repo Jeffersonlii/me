@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
-import styled, { keyframes } from "styled-components";
-import Draggable from "../Draggable/CustomDraggable";
-import "./Window.scss";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import Draggable from '../Draggable/CustomDraggable';
+import './Window.scss';
 export default function Window(props: any) {
-  const width = props?.width ?? "30rem";
-  const height = props?.height ?? "15rem";
+  const width = props?.width ?? '30rem';
+  const height = props?.height ?? '15rem';
 
   let onCloseWindow = () => {
     props.onCloseWindow(props.windowID);
@@ -30,7 +30,7 @@ export default function Window(props: any) {
 
   let randomPos = getRandomNumberBetween(80, 100);
   let posPivots: any = document
-    ?.getElementById("desktop")
+    ?.getElementById('desktop')
     ?.getBoundingClientRect();
   return (
     <Draggable
@@ -43,8 +43,12 @@ export default function Window(props: any) {
       <div className="window">
         <div className="header">
           <HeaderLines></HeaderLines>
-          <div className="title">{props?.header ?? "UNDEFINED_HEADER"}</div>
-          <div className="close" onClick={onCloseWindow}></div>
+          <div className="title">{props?.header ?? 'UNDEFINED_HEADER'}</div>
+          <div
+            className="close"
+            onClick={onCloseWindow}
+            onPointerUp={onCloseWindow}
+          ></div>
           <HeaderLines></HeaderLines>
         </div>
         <div className="infoHeader"></div>
