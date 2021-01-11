@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs';
+import { Subject } from "rxjs";
 
 //general
 export const $openWindow = new Subject<{

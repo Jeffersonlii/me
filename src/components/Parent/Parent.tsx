@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
-import MainOS from '../MainOS/MainOS';
-import Window from '../Window/Window';
-import './Parent.scss';
-import * as service from './ParentService';
-import { Subscription } from 'rxjs';
+import React from "react";
+import ReactPlayer from "react-player";
+import MainOS from "../MainOS/MainOS";
+import Window from "../Window/Window";
+import "./Parent.scss";
+import * as service from "./ParentService";
+import { Subscription } from "rxjs";
 
 export default class Parent extends React.Component<
   {},
@@ -99,7 +99,7 @@ export default class Parent extends React.Component<
         {this.state.audioOptions.init && (
           <ReactPlayer
             className="bgaudio"
-            url={[{ src: 'wn.mp3', type: 'audio/mpeg' }]}
+            url={[{ src: "wn.mp3", type: "audio/mpeg" }]}
             loop
             playing={true}
             volume={this.state.audioOptions.vol}
@@ -113,7 +113,7 @@ export default class Parent extends React.Component<
         {this.state.openVideo && (
           <ReactPlayer
             className="video"
-            url={[{ src: 'bg.mp4', type: 'video/webm' }]}
+            url={[{ src: "bg.mp4", type: "video/webm" }]}
             loop
             volume={0}
             muted

@@ -1,7 +1,7 @@
-import React from 'react';
-import json from '../../../public/strings';
-import './ExperiencePage.scss';
-import { $openWindow } from './../../Parent/ParentService';
+import React from "react";
+import json from "../../../public/strings";
+import "./ExperiencePage.scss";
+import { $openWindow } from "./../../Parent/ParentService";
 export default function ExperiencePage(props: any) {
   const openExperience = (experienceName: string, experienceInfo: any) => {
     $openWindow.next({
@@ -12,16 +12,16 @@ export default function ExperiencePage(props: any) {
         ></ExperienceDetail>
       ),
       params: {
-        header: `${experienceName.replace(/ /g, '_')}.HTML`,
-        width: '60rem',
-        height: '30rem',
+        header: `${experienceName.replace(/ /g, "_")}.HTML`,
+        width: "60rem",
+        height: "30rem",
       },
     });
   };
 
-  const experienceTypes: { key: 'work exp' | 'projects'; name: string }[] = [
-    { key: 'work exp', name: 'Work Experience' },
-    { key: 'projects', name: 'Personal Projects' },
+  const experienceTypes: { key: "work exp" | "projects"; name: string }[] = [
+    { key: "work exp", name: "Work Experience" },
+    { key: "projects", name: "Personal Projects" },
   ];
   return (
     <>
@@ -62,9 +62,9 @@ function ExperienceDetail(props: { name: string; info: any }) {
         />
       ),
       params: {
-        header: (imgDetail.url.split('/').pop() as string).toUpperCase(),
-        width: '30rem',
-        height: '100%',
+        header: (imgDetail.url.split("/").pop() as string).toUpperCase(),
+        width: "30rem",
+        height: "100%",
       },
     });
   };
@@ -75,13 +75,13 @@ function ExperienceDetail(props: { name: string; info: any }) {
         {props.name} - {props.info.time}
       </h1>
       <section>{props.info.desc}</section>
-      {Object.keys(props.info['modal_details']).map((section) => {
+      {Object.keys(props.info["modal_details"]).map((section) => {
         return (
           <ul>
             <li>
               {section}
               <ul>
-                {props.info['modal_details'][section].map((point: string) => (
+                {props.info["modal_details"][section].map((point: string) => (
                   <li dangerouslySetInnerHTML={{ __html: point }} />
                 ))}
               </ul>
@@ -91,7 +91,7 @@ function ExperienceDetail(props: { name: string; info: any }) {
       })}
       <section>Relevant Images</section>
       <div className="img-grid">
-        {props.info['images'].map((img: { url: string; desc: string }) => {
+        {props.info["images"].map((img: { url: string; desc: string }) => {
           return (
             <div>
               <ul>
@@ -103,7 +103,7 @@ function ExperienceDetail(props: { name: string; info: any }) {
                     openImage(img);
                   }}
                 />
-                <li style={{ width: '15rem' }}>{img.desc}</li>
+                <li style={{ width: "15rem" }}>{img.desc}</li>
               </ul>
             </div>
           );
