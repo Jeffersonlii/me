@@ -199,9 +199,9 @@ export default {
         ],
         Responsibilities: [
           'Develop front end <b>Angular components</b>, as well as backend <b>django RESTful APIs</b>',
-          'Use Angular RxJs architecture to data and state',
+          'Use Angular RxJs architecture to handle data and state',
           'Carry out devops tooling with AWS',
-          'To proffessionally represent the company during outsite occasions, such as <b>recruitment and data partner visits</b>',
+          'To proffessionally represent the company during offsite occasions, such as <b>recruitment and data partner visits</b>',
         ],
         Achivements: [
           'Extensively studied and tested most <b>previously untested</b> front and backend code, using <b>Karma</b> and <b>Postman</b>',
