@@ -2,7 +2,7 @@
 export default {
   paragraph: [
     'Hi!, My name is Jefferson Li. <br><br>',
-    'I am a <b>Full Stack Developer</b> specializing in Angular, with a focus in building scalable and responsive software ( try to break this site 😉 ). <br> <br> ',
+    'I am a <b>Full Stack Developer</b> specializing in Angular, with a focus on building scalable and responsive software ( try to break this site 😉 ). <br> <br> ',
     "Previously at <a href='https://temerityanalytics.com/' target='_blank'><b>Temerity Analytics</b></a>.<br>",
     'Currently pursuing a specialist in <b>Software Engineering</b> and a minor in <b>Statistics</b> at the ',
     "<a href='https://www.utoronto.ca' target='_blank'><b> University of Toronto </b></a>(2023)<br><br>",
