@@ -14,7 +14,7 @@ body {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently*/
 
-  word-break: break-all;
+  word-break: break-word;
 }
 .selectable {
   //disables all text selection, makes dragging very smooth
