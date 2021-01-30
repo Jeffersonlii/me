@@ -5,4 +5,4 @@
  - made with react 
  
  
-![image](https://user-images.githubusercontent.com/32963293/104111471-0f56ca80-52b0-11eb-8731-6efcc5be9712.png)
+![image](https://user-images.githubusercontent.com/32963293/106365896-77745b80-6306-11eb-833c-cbd082aa9f00.png)
