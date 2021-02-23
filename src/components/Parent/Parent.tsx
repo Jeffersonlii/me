@@ -110,7 +110,7 @@ export default class Parent extends React.Component<
             }}
           />
         )}
-        {this.state.openVideo && (
+        {/* {this.state.openVideo && (
           <ReactPlayer
             className="video"
             url={[{ src: "bg.mp4", type: "video/webm" }]}
@@ -126,7 +126,7 @@ export default class Parent extends React.Component<
               },
             }}
           />
-        )}
+        )} */}
         {this.state.openOS && <MainOS></MainOS>}
         {this.state.activeWindows}
       </div>
