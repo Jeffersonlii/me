@@ -14,7 +14,7 @@ jobs:
       - run: npm cache clean --force
       - run: rm -rf node_modules package-lock.json
       - run: npm i
-      - run: npm run build
+      - run: react-scripts build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
