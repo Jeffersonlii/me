@@ -50,11 +50,11 @@ export default function Window(props: any) {
                     <div className="title">
                         {props?.header ?? 'UNDEFINED_HEADER'}
                     </div>
-                    <div
+                    <button
                         className="close"
                         onClick={onCloseWindow}
                         onPointerUp={onCloseWindow}
-                    ></div>
+                    ></button>
                     <HeaderLines></HeaderLines>
                 </div>
                 <div className="infoHeader"></div>

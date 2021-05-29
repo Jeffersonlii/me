@@ -68,14 +68,12 @@ export default {
     },
     projects: {
         Pathfinder: {
-            desc:
-                'React Webapp that matches random users to rooms based on perferences',
+            desc: 'Easy to use visualizer for pathfinding algorithms',
             link: '',
-            time: '02/01/2021',
+            time: '02/2021',
             modal_details: {
                 What: [
-                    'Built an easy to use visualizer for pathfinding algorithms',
-                    'Supports painting custom maps',
+                    "Visualize pathfinding algorithms such as Dijkstra's with customizable maps and waypoints ",
                     'Implemented using 0 libraries and vanilla JS to minimize overhead',
                 ],
                 Links: [
@@ -94,7 +92,7 @@ export default {
             desc:
                 'React Webapp that matches random users to rooms based on perferences',
             link: '',
-            time: '02/01/2021',
+            time: '02/2021',
             modal_details: {
                 Goal: [
                     'To created an omegle like platform with a smart matching system',
@@ -105,7 +103,7 @@ export default {
                     'Used the Certbot container to set up an autorenewing certificate for HTTPS',
                 ],
                 Links: [
-                    "<a href='https://www.thecafe.ml' target='_blank'><b>App</b></a>",
+                    // "<a href='https://www.thecafe.ml' target='_blank'><b>App</b></a>",
                     "<a href='https://www.youtube.com/watch?v=vsuU0TGqF4k' target='_blank'><b>Video Showcase</b></a>",
                 ],
             },
@@ -121,58 +119,54 @@ export default {
             ],
         },
         SportsCred: {
-            desc: 'Large Angular webapp for debating/betting on sports',
+            desc: 'Large Angular web app for debating/betting on sports',
             link: '',
-            time: '01/01/2021',
+            time: '01/2021',
             modal_details: {
                 Goal: [
                     'With a team of 6, to create a large platform for competitive debates and trivia on sports league related topics',
-                    'Each user has a total ACS score, determining their skill.',
-                    'Users can play compete in trivia, debates and predictions to effect their ACS score',
                 ],
                 'My Tasks': [
                     '<b>Main designer</b> and developer of the Angular based frontend',
-                    '<b>Clearly communicated</b> API specifications to backend team for implementation',
-                    'Linked up backend and frontend using RxJS observables, along with a redux store for local state',
-                    'Fully designed and implemented <b>logins, authentification, my profile and admin page</b>',
+                    'Linked up backend and frontend using Axios and RxJS observables',
+                    'Utilized the redux action effect reducer architecture to manage application state',
+                    'Implemented session-based authentification, as well as salting and hashing passwords',
                     'Used<b> media queries</b> to ensure a smooth experience on all platforms',
+                ],
+                Result: [
+                    'Ranked as the best project in the class of 30 groups, received work offers from the client',
                 ],
             },
             images: [
                 {
                     url: '/projects-and-work/lilypad/debates.PNG',
-                    desc:
-                        "Debates Page, reddit-like dicussion board. Users can rate responses to influence the responder' ACS score",
+                    desc: 'Debates Page',
                 },
                 {
                     url: '/projects-and-work/lilypad/login.PNG',
-                    desc:
-                        'Login Page, after logging in, a JWT is generated to access the REST API for further security',
+                    desc: 'Login Page',
                 },
                 {
                     url: '/projects-and-work/lilypad/myprofile.PNG',
-                    desc:
-                        'My Profile Page, users can view their ACS score and its history. Furthremore, users can change profile pictures, as well as self descriptions',
+                    desc: 'My Profile Page',
                 },
                 {
                     url: '/projects-and-work/lilypad/registration.PNG',
-                    desc:
-                        'Registration Page, secured with a complex password requirement. Credentials are salted and hashed to the backend database.',
+                    desc: 'Registration Page',
                 },
             ],
         },
         'Personal Website': {
             desc: "You're looking at it!",
             link: '',
-            time: '01/01/2021',
+            time: '01/2021',
             modal_details: {
                 Goal: [
-                    'To develope an extendable and responsive website showcasing my achivements and experiences',
+                    'To develop an extendable and responsive website showcasing my achievements  and experiences',
                 ],
                 'My Tasks': [
-                    "Rehauled my personal portfolio website using new technologies and frameworks I've learned during my 8 month work term as an full stack developer",
-                    'Used React and draggable library to create an unique design',
-                    'Insured <b>high extensibility</b> by centralizing all strings in <b>strings.json</b>. This allows easy insertion of new projects, and internationalisation',
+                    "Rehauled my portfolio website using new technologies and frameworks I've learned during my 8-month work term as a full stack developer",
+                    'Insured <b>high extensibility</b> by centralizing all strings in <b>strings.json</b>. This allows easy addition of new entries and internationalisation',
                 ],
             },
             images: [
@@ -185,21 +179,21 @@ export default {
         Gold: {
             desc: 'Android Shopping App',
             link: '',
-            time: '11/01/2019',
+            time: '11/2019',
             modal_details: {
                 Goal: [
                     'To develop a shopping android app with a 3 person team for a software design class',
                     'To utilize <b>SOLID principles</b>, <b>design patterns</b>, and the <b>Scrum Methodology</b> during development.',
                 ],
                 'My Tasks': [
-                    'Made use of <b>abstration and interfaces</b> to design highly flexible and object oriented codebase',
-                    'Planned around <b>Model View Controller</b> to attain an organized archetecture',
+                    'Made use of <b>abstraction and interfaces</b> to design highly flexible and object-oriented codebase',
+                    'Planned around <b>Model View Controller</b> to attain an organized architecture',
                     'Designed and implemented a visually pleasing design that received <b>direct praise</b> from the TA',
                     'Organized <b>Scrum meetings</b> 2 times per week to discuss progress',
                 ],
                 Result: [
-                    'Advanced my skills as a Android developer',
-                    'Scored a <b>100%</b> on this project that is worth 40% of final grade',
+                    'Advanced my skills as an Android developer',
+                    'Scored a <b>100%</b> grade worth 40% of the final mark',
                 ],
             },
             images: [
@@ -216,20 +210,14 @@ export default {
         'Where Am I?': {
             desc: 'Location Sharing Web App',
             link: 'https://github.com/Jeffersonlii/Where-Am-I-',
-            time: '08/01/2019',
+            time: '08/2019',
             modal_details: {
-                Goal: [
-                    'To develop an app that allows users to sharer their location through a single link',
-                    'Motivated by when I wanted to share my location with my parents, who did not use social media.',
-                    'I realized there was not a tool that can painlessly share location, I decided to create one',
-                    'The key feature of this project is its simplicity, sharing through a link implies no downloading, no signup, just sharing.',
-                ],
+                Goal: ['To allow instant location sharing via a link'],
                 'My Tasks': [
                     'Used Python (flask) for backend, to update and retrieve user coordinates using a SQL database',
-                    'Generates link for every user, for sharing unique locations',
+                    'Implemented unique link generation for every use instance',
                     'Used Ajax to pass coordinate data from Python to JS and vice versa',
                 ],
-                Result: ['Gained experience in Google API and AJAX calls'],
             },
             images: [
                 {
@@ -276,7 +264,7 @@ export default {
         'Developed with 🌮 by Jefferson Li <br/><br/>',
         "Built using React with <a href='https://www.npmjs.com/package/react-draggable' target='_blank'><b>react-draggable</b></a><br/><br/>",
         'Best Viewed On Chrome<br/>',
-        '©2020 Jefferson Li. All rights reserved.',
+        `©${new Date().getFullYear()} Jefferson Li. All rights reserved.`,
         "<br/><br/><a href='https://github.com/Jeffersonlii/psite-v3' target='_blank'><b>Source Code</b></a>",
     ],
     socials: [
