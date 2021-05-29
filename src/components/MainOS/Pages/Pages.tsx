@@ -85,7 +85,11 @@ export default function DesktopFiles(props: any) {
             {/* <div className="file" id="skl" onClick={() => openWindow("Skills")}>
         SKILLS.HTML
       </div> */}
-            <div className="file" id="res" onClick={() => openWindow('Resume')}>
+            <div
+                className="file"
+                id="res"
+                onClick={() => window.open('pdfs/resume.pdf', '_blank')}
+            >
                 RESUME.PDF
             </div>
             <div
@@ -108,6 +112,8 @@ function Rand() {
     return <img src="gifs/funny_cow.gif" id="rand-gif" alt="funny cow gif" />;
 }
 function Resume() {
+    //this path is disabled for now
+    // in its place, we simply open the pdf in another page
     return (
         <>
             <embed
