@@ -6,7 +6,7 @@ export default {
         "Previously at <a href='https://temerityanalytics.com/' target='_blank'><b>Temerity Analytics</b></a>.<br>",
         'Currently pursuing a specialist in <b>Software Engineering</b> and a minor in <b>Statistics</b> at the ',
         "<a href='https://www.utoronto.ca' target='_blank'><b> University of Toronto </b></a>(2023)<br><br>",
-        'I love going to the <b>gym</b>, <b>badminton</b> and <b>photography</b>, I also love to create and bring <b>user friendly</b> and <b>responsive design</b> to life!',
+        'I love going to the <b>gym</b>, <b>badminton</b>, and <b>photography</b>, I also love to create and bring <b>user friendly</b> and <b>responsive designs</b> to life!',
     ],
     qualifications: {
         'Technical Skills': {
@@ -77,7 +77,6 @@ export default {
                     'Built an easy to use visualizer for pathfinding algorithms',
                     'Supports painting custom maps',
                     'Implemented using 0 libraries and vanilla JS to minimize overhead',
-                    'All data structures and algorithms built natively to better learn the algorithms',
                 ],
                 Links: [
                     "<a href='https://jeffersonlii.github.io/Pathfinder/' target='_blank'><b>App</b></a>",
@@ -91,7 +90,7 @@ export default {
                 },
             ],
         },
-        'TheCafe.ml': {
+        TheCafe: {
             desc:
                 'React Webapp that matches random users to rooms based on perferences',
             link: '',
@@ -246,24 +245,19 @@ export default {
     },
     'work exp': {
         'Temerity Analytics': {
-            desc: 'Full Stack Developer',
+            desc: 'Full-Stack Developer Intern',
             link: 'https://temerityanalytics.com/',
-            time: '01/06/2020 - 08/31/2020',
+            time: '01/2020 - 08/2020',
             modal_details: {
                 Role: [
-                    'Fullstack developer, developing all aspects of Merln, our cloud based marketing analysis software',
-                ],
-                Responsibilities: [
-                    'Develop front end <b>Angular components</b>, as well as backend <b>django RESTful APIs</b>',
-                    'Use Angular RxJs architecture to handle data and state',
-                    'Carry out devops tooling with AWS',
-                    'To proffessionally represent the company during offsite occasions, such as <b>recruitment and data partner visits</b>',
+                    'Fullstack developer, developing all aspects of Merln, our cloud-based marketing analysis software',
                 ],
                 Achivements: [
-                    'Extensively studied and tested most <b>previously untested</b> front and backend code, using <b>Karma</b> and <b>Postman</b>',
-                    'Emphasised the importance of testing, and <b>single handedly pushed and implemented a company wide testing methodology</b>, which did not exist prior',
-                    'Trusted with planning and implementing a <b>massive redesign and rewrite</b> of our admin interface, completed fully to specification 1 week before deadline',
-                    "Received a final performance evaluation of  <b>'Excellent (exceeded job requirements in all areas)' </b>, and <b>full-time offer</b> after graduation",
+                    'Rearchetected the client-facing admin interface, which significantly improved the overall usability and stability of the software, and resulted in a final performance evaluation of ’Excellent’',
+                    'Drove a unit testing effort, getting API test coverage from 0% -> 40%, and speeding up some endpoints by more than 80%',
+                ],
+                Tech: [
+                    '(Angular, Django ORM/ REST framework, RxJS, Redux, NgRx, npm, PostgreSQL)',
                 ],
             },
             images: [

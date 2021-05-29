@@ -19,6 +19,7 @@
         "react-player": "^2.6.2",
         "react-scripts": "4.0.3",
         "react-select": "^3.1.0",
+        "react-zoom-pan-pinch": "^1.6.1",
         "rxjs": "^6.6.3",
         "styled-components": "^5.2.1",
         "typeit-react": "^0.1.3",

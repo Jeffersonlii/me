@@ -2,6 +2,8 @@ import React from 'react';
 import json from '../../../public/strings';
 import './ExperiencePage.scss';
 import { $openWindow } from './../../Parent/ParentService';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+
 export default function ExperiencePage(props: any) {
     const openExperience = (experienceName: string, experienceInfo: any) => {
         $openWindow.next({
@@ -55,18 +57,24 @@ function ExperienceDetail(props: { name: string; info: any }) {
     const openImage = (imgDetail: { url: string; desc: string }) => {
         $openWindow.next({
             child: (
-                <img
-                    src={process.env.PUBLIC_URL + imgDetail.url}
-                    id="expanded-img"
-                    alt=""
-                />
+                <div id="expanded-img">
+                    <TransformWrapper>
+                        <TransformComponent>
+                            <img
+                                src={process.env.PUBLIC_URL + imgDetail.url}
+                                alt=""
+                            />
+                        </TransformComponent>
+                    </TransformWrapper>
+                </div>
             ),
             params: {
                 header: (imgDetail.url
                     .split('/')
                     .pop() as string).toUpperCase(),
-                width: '30rem',
-                height: '100%',
+                // width: '80vw',
+                // height: '80vh',
+                disableExpand: true,
             },
         });
     };
@@ -103,15 +111,15 @@ function ExperienceDetail(props: { name: string; info: any }) {
                     (img: { url: string; desc: string }) => {
                         return (
                             <div>
+                                <img
+                                    src={process.env.PUBLIC_URL + img.url}
+                                    alt=""
+                                    className="img-btn"
+                                    onClick={() => {
+                                        openImage(img);
+                                    }}
+                                />
                                 <ul>
-                                    <img
-                                        src={process.env.PUBLIC_URL + img.url}
-                                        alt=""
-                                        className="img-btn"
-                                        onClick={() => {
-                                            openImage(img);
-                                        }}
-                                    />
                                     <li style={{ width: '15rem' }}>
                                         {img.desc}
                                     </li>
