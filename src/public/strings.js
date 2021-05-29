@@ -81,7 +81,7 @@ export default {
                 ],
                 Links: [
                     "<a href='https://jeffersonlii.github.io/Pathfinder/' target='_blank'><b>App</b></a>",
-                    "<a href='https: //github.com/Jeffersonlii/Pathfinder' target='_blank'><b>Repo</b></a>",
+                    "<a href='https://github.com/Jeffersonlii/Pathfinder' target='_blank'><b>Repo</b></a>",
                 ],
             },
             images: [
@@ -112,7 +112,7 @@ export default {
             },
             images: [
                 {
-                    url: '/projects-and-work/cafe/1.PNG',
+                    url: '/projects-and-work/cafe/1.png',
                     desc: 'Dashboard',
                 },
                 {
