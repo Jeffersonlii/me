@@ -48,15 +48,15 @@ export default function DesktopFiles(props: any) {
                         height: '40rem',
                     },
                 });
-            case 'Resume':
-                return $openWindow.next({
-                    child: <Resume></Resume>,
-                    params: {
-                        header: 'RESUME.PDF',
-                        width: '38rem',
-                        height: '30rem',
-                    },
-                });
+            // case 'Resume':
+            //     return $openWindow.next({
+            //         child: <Resume></Resume>,
+            //         params: {
+            //             header: 'RESUME.PDF',
+            //             width: '38rem',
+            //             height: '30rem',
+            //         },
+            //     });
             case 'Socials':
                 return $openWindow.next({
                     child: <Socials></Socials>,
@@ -111,20 +111,20 @@ function Me() {
 function Rand() {
     return <img src="gifs/funny_cow.gif" id="rand-gif" alt="funny cow gif" />;
 }
-function Resume() {
-    //this path is disabled for now
-    // in its place, we simply open the pdf in another page
-    return (
-        <>
-            <embed
-                src="pdfs/resume.pdf"
-                type="application/pdf"
-                width="100%"
-                height="800"
-            ></embed>
-        </>
-    );
-}
+// function Resume() {
+//     //this path is disabled for now
+//     // in its place, we simply open the pdf in another page
+//     return (
+//         <>
+//             <embed
+//                 src="pdfs/resume.pdf"
+//                 type="application/pdf"
+//                 width="100%"
+//                 height="800"
+//             ></embed>
+//         </>
+//     );
+// }
 function Socials() {
     /* eslint-disable react/jsx-no-target-blank */
     return (

@@ -3,14 +3,14 @@
     height: 100%;
     background-color: black;
     position: absolute;
-    animation: fadeIn 11s ease-out;
+    animation: fadeIn 4s ease-out;
     opacity: 0;
     z-index: 999;
     pointer-events: none;
     display: flex;
     .initText {
         color: white;
-        animation: typeText 10s ease-out;
+        animation: typeText 4s ease-out;
         text-align: initial;
         margin: 2rem;
         opacity: 0;
