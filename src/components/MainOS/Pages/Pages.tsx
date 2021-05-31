@@ -5,11 +5,22 @@ import ExperiencePage from './ExperiencePage';
 import Skills from './Skills';
 import { $openWindow } from './../../Parent/ParentService';
 
+interface FileDefinition {
+    filename: any;
+    onclick: any;
+    id: string;
+}
+
 export default function DesktopFiles(props: any) {
-    let openWindow = (key: string) => {
-        switch (key) {
-            case 'Me':
-                return $openWindow.next({
+    let fileDefs: FileDefinition[] = [
+        {
+            filename: (
+                <>
+                    JEFFERSON_LI<br></br>_INTRO.TXT
+                </>
+            ),
+            onclick: () => {
+                $openWindow.next({
                     child: <Me></Me>,
                     params: {
                         header: 'JEFFERSON_LI_INTRO.TXT',
@@ -17,8 +28,17 @@ export default function DesktopFiles(props: any) {
                         height: '18rem',
                     },
                 });
-            case 'Exp':
-                return $openWindow.next({
+            },
+            id: 'me',
+        },
+        {
+            filename: (
+                <>
+                    EXPERIENCES<br></br>.HTML
+                </>
+            ),
+            onclick: () => {
+                $openWindow.next({
                     child: (
                         <ExperiencePage
                             openWindow={props.openWindow}
@@ -30,8 +50,13 @@ export default function DesktopFiles(props: any) {
                         height: '18rem',
                     },
                 });
-            case 'Rand':
-                return $openWindow.next({
+            },
+            id: 'exp',
+        },
+        {
+            filename: <>MILK.GIF</>,
+            onclick: () => {
+                $openWindow.next({
                     child: <Rand></Rand>,
                     params: {
                         header: 'MILK.GIF',
@@ -39,26 +64,18 @@ export default function DesktopFiles(props: any) {
                         height: '20rem',
                     },
                 });
-            case 'Skills':
-                return $openWindow.next({
-                    child: <Skills></Skills>,
-                    params: {
-                        header: 'SKILLS.HTML',
-                        width: '50rem',
-                        height: '40rem',
-                    },
-                });
-            // case 'Resume':
-            //     return $openWindow.next({
-            //         child: <Resume></Resume>,
-            //         params: {
-            //             header: 'RESUME.PDF',
-            //             width: '38rem',
-            //             height: '30rem',
-            //         },
-            //     });
-            case 'Socials':
-                return $openWindow.next({
+            },
+            id: 'rand',
+        },
+        {
+            filename: <>RESUME.PDF</>,
+            onclick: () => window.open('pdfs/resume.pdf', '_blank'),
+            id: 'res',
+        },
+        {
+            filename: <>SOCIALS.HTML</>,
+            onclick: () => {
+                $openWindow.next({
                     child: <Socials></Socials>,
                     params: {
                         header: 'SOCIALS.HTML',
@@ -66,39 +83,25 @@ export default function DesktopFiles(props: any) {
                         height: '25rem',
                     },
                 });
-            default:
-                return 'foo';
-        }
-    };
+            },
+            id: 'creds',
+        },
+    ];
 
     return (
         <div className="desktop-files">
-            <div className="file" id="me" onClick={() => openWindow('Me')}>
-                JEFFERSON_LI<br></br>_INTRO.TXT
-            </div>
-            <div className="file" id="exp" onClick={() => openWindow('Exp')}>
-                EXPERIENCES<br></br>.HTML
-            </div>
-            <div className="file" id="rand" onClick={() => openWindow('Rand')}>
-                MILK.GIF
-            </div>
-            {/* <div className="file" id="skl" onClick={() => openWindow("Skills")}>
-        SKILLS.HTML
-      </div> */}
-            <div
-                className="file"
-                id="res"
-                onClick={() => window.open('pdfs/resume.pdf', '_blank')}
-            >
-                RESUME.PDF
-            </div>
-            <div
-                className="file"
-                id="creds"
-                onClick={() => openWindow('Socials')}
-            >
-                SOCIALS.HTML
-            </div>
+            {fileDefs.map((def) => {
+                return (
+                    <div className="file" id={def.id} onClick={def.onclick}>
+                        <img
+                            src={process.env.PUBLIC_URL + 'fileicon.png'}
+                            alt=""
+                            style={{ width: '50px' }}
+                        />
+                        {def.filename}
+                    </div>
+                );
+            })}
         </div>
     );
 }
@@ -111,20 +114,6 @@ function Me() {
 function Rand() {
     return <img src="gifs/funny_cow.gif" id="rand-gif" alt="funny cow gif" />;
 }
-// function Resume() {
-//     //this path is disabled for now
-//     // in its place, we simply open the pdf in another page
-//     return (
-//         <>
-//             <embed
-//                 src="pdfs/resume.pdf"
-//                 type="application/pdf"
-//                 width="100%"
-//                 height="800"
-//             ></embed>
-//         </>
-//     );
-// }
 function Socials() {
     /* eslint-disable react/jsx-no-target-blank */
     return (
