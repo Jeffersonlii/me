@@ -2,7 +2,6 @@ import React from 'react';
 import json from '../../../public/strings';
 import './Pages.scss';
 import ExperiencePage from './ExperiencePage';
-import Skills from './Skills';
 import { $openWindow } from './../../Parent/ParentService';
 
 interface FileDefinition {
