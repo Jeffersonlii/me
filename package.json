@@ -30,7 +30,7 @@
     "scripts": {
         "i": "set NODE_OPTIONS=--openssl-legacy-provider && npm i --save --legacy-peer-deps",
         "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-        "build": "set NODE_OPTIONS=--openssl-legacy-provider && rimraf build && react-scripts build",
+        "build": "set NODE_OPTIONS=--openssl-legacy-provider && rimraf build && react-scripts build --openssl-legacy-provider",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "pretty": "prettier --write \"./**/*.{js,jsx,json,ts,tsx}\""
