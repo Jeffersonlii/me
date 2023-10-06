@@ -1,4 +1,4 @@
-## Hosted at https://jeffersonli.dev/
+## Hosted at [https://jeffersonli.dev/](https://jeffersonlii.github.io/me/)
 
 # Personal Site V3 !
  - macOS SYSTEM 1 clone
