@@ -11,4 +11,7 @@
 .video {
   position: absolute;
   pointer-events: none;
+  & > video{
+    object-fit: fill;
+  }
 }
