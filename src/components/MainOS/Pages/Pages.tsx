@@ -93,7 +93,7 @@ export default function DesktopFiles(props: any) {
                 return (
                     <div className="file" id={def.id} onClick={def.onclick}>
                         <img
-                            src={process.env.PUBLIC_URL + 'fileicon.png'}
+                            src={process.env.PUBLIC_URL + '/fileicon.png'}
                             alt=""
                             style={{ width: '50px' }}
                         />
