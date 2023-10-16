@@ -18,30 +18,30 @@ export function BootText() {
 
     return (
         <TypeIt
-            options={{ speed: 0.5 }}
+            options={{ speed: 0 }}
             getBeforeInit={(instance: any) => {
                 instance
                     .type('COMPBIO (C) 1991 MOTHERBOARD. INC.')
-                    .pause(pause)
+                    // .pause(pause)
                     .break()
                     .type('BIOS DATE 09/29/91 15:43:29 VER: 08.00.15')
-                    .pause(pause)
+                    // .pause(pause)
                     .break()
                     .type('CPU: INTEL(R) CPU 330 @40MHZ')
-                    .pause(pause)
+                    // .pause(pause)
                     .break()
                     .type('SPEED: 40MHZ')
-                    .pause(pause)
+                    // .pause(pause)
                     .break()
                     .type('THIS VGA/PCI BIOS IS RELEASED UNDER THE GNU LGPL')
-                    .pause(pause)
+                    // .pause(pause)
                     .break()
                     .type('64-1001-100001010100-12995-1AE23EV003-Y30C')
-                    .pause(pause)
+                    // .pause(pause)
                     .break()
                     .type('BOOTING FROM HARD DISK')
-                    .pause(pause)
-                    .type('. . .', { speed: pause * 4 });
+                    // .pause(pause)
+                    .type('. . .', { speed: pause * 4 + 1 });
                 return instance;
             }}
         />

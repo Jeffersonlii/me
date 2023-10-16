@@ -99,8 +99,8 @@ export default class Parent extends React.Component<
         {this.state.audioOptions.init && (
           <ReactPlayer
             className="bgaudio"
-            url={[{ src: "wn.mp3", type: "audio/mpeg" }]}
-            loop
+            url={[{ src: "wn2.mp3", type: "audio/mpeg" }]}
+            loop={false}
             playing={true}
             volume={this.state.audioOptions.vol}
             config={{

@@ -1,16 +1,17 @@
+$black-time: 2s;
 .fadein {
     width: 100%;
     height: 100%;
     background-color: black;
     position: absolute;
-    animation: fadeIn 4s ease-out;
+    animation: fadeIn $black-time ease-out;
     opacity: 0;
     z-index: 999;
     pointer-events: none;
     display: flex;
     .initText {
         color: white;
-        animation: typeText 4s ease-out;
+        animation: typeText $black-time ease-out;
         text-align: initial;
         margin: 2rem;
         opacity: 0;

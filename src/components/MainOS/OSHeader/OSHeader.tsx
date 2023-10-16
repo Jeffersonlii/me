@@ -69,12 +69,12 @@ export default function OSHeader(props: any) {
     {
       label: "View",
       options: [
-        {
-          option: "Toggle Audio",
-          onClick: () => {
-            service.$audioToggle.next();
-          },
-        },
+        // {
+        //   option: "Toggle Audio",
+        //   onClick: () => {
+        //     service.$audioToggle.next();
+        //   },
+        // },
         {
           option: "Toggle Video",
           onClick: () => {
@@ -158,18 +158,20 @@ export default function OSHeader(props: any) {
 
 function DropPanel(props: { label: DropDownLabel }) {
   return (
-    <div className="panel">
-      {props.label.options.map((op) => {
-        return op.disabled ? (
-          <div className="option disabled" key={op.id}>
-            {op.option}
-          </div>
-        ) : (
-          <div className="option" key={op.id} onClick={op.onClick}>
-            {op.option}
-          </div>
-        );
-      })}
+    <div className="panelwrap">
+      <div className="panel">
+        {props.label.options.map((op) => {
+          return op.disabled ? (
+            <div className="option disabled" key={op.id}>
+              {op.option}
+            </div>
+          ) : (
+            <div className="option" key={op.id} onClick={op.onClick}>
+              {op.option}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

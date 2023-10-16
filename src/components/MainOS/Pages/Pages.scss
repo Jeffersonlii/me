@@ -1,47 +1,13 @@
 .desktop-files {
-    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-
-    align-items: center;
-    justify-items: center;
-
-    grid-template-areas:
-        'me . . .  . . '
-        'exp . . . . .'
-        'res . . . . . '
-        'creds . . . . .'
-        'rand . . . . .'
-        '. . . . . .';
+    width: fit-content;
 
     .file {
         margin: 1rem;
         cursor: pointer;
         word-break: initial;
-        // &:active {
-        //     color: white;
-        //     background-color: black;
-        // }
-    }
-    #me {
-        grid-area: me;
-    }
-    #exp {
-        grid-area: exp;
-    }
-    #rand {
-        grid-area: rand;
-    }
-    #skl {
-        grid-area: skls;
-    }
-    #res {
-        grid-area: res;
-    }
-    #creds {
-        grid-area: creds;
     }
 
     div {
@@ -51,6 +17,7 @@
         align-items: center;
 
         padding: 0.5rem;
+
         img {
             margin-bottom: 0.3rem;
             animation: float 4s ease-in-out infinite;
@@ -67,9 +34,11 @@
     0% {
         transform: translatey(0px);
     }
+
     50% {
         transform: translatey(-10px);
     }
+
     100% {
         transform: translatey(0px);
     }
