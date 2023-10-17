@@ -4,5 +4,4 @@
  - macOS SYSTEM 1 clone
  - made with react 
  
- 
-![image](https://user-images.githubusercontent.com/32963293/106365896-77745b80-6306-11eb-833c-cbd082aa9f00.png)
+![image](https://github.com/Jeffersonlii/me/assets/32963293/edf4c631-15cb-448b-8fc5-974362a87c9e)
