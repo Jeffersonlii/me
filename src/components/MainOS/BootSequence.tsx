@@ -1,20 +1,20 @@
 import React from 'react';
 import TypeIt from 'typeit-react';
 
-export function BootSequence(props: { onClickBoot: () => any }) {
-    document.addEventListener('keydown', props.onClickBoot);
+// export function BootSequence(props: { onClickBoot: () => any }) {
+//     document.addEventListener('keydown', props.onClickBoot);
 
-    return (
-        <div className="bootWrap" onClick={props.onClickBoot}>
-            <div className="initButton">
-                PRESS ANY KEY TO BOOT FROM CD OR DVD....
-            </div>
-        </div>
-    );
-}
+//     return (
+//         <div className="bootWrap" onClick={props.onClickBoot}>
+//             <div className="initButton">
+//                 PRESS ANY KEY TO BOOT FROM CD OR DVD....
+//             </div>
+//         </div>
+//     );
+// }
 
 export function BootText() {
-    let pause = 1;
+    // let pause = 1;
 
     return (
         <TypeIt
