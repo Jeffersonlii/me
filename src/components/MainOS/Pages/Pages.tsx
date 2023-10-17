@@ -3,6 +3,7 @@ import json from '../../../public/strings';
 import './Pages.scss';
 import ExperiencePage from './ExperiencePage';
 import { $openWindow } from './../../Parent/ParentService';
+import Me from './MePage';
 
 interface FileDefinition {
     filename: any;
@@ -15,16 +16,16 @@ export default function DesktopFiles(props: any) {
         {
             filename: (
                 <>
-                    JEFFERSON_LI<br></br>_INTRO.TXT
+                    INTRODUCTION.TXT
                 </>
             ),
             onclick: () => {
                 $openWindow.next({
                     child: <Me></Me>,
                     params: {
-                        header: 'JEFFERSON_LI_INTRO.TXT',
-                        width: '38rem',
-                        height: '18rem',
+                        header: 'INTRODUCTION.TXT',
+                        width: '50rem',
+                        height: '25rem',
                     },
                 });
             },
@@ -105,11 +106,7 @@ export default function DesktopFiles(props: any) {
     );
 }
 
-function Me() {
-    return (
-        <div dangerouslySetInnerHTML={{ __html: json.paragraph.join('') }} />
-    );
-}
+
 function Rand() {
     return <img src="gifs/funny_cow.gif" id="rand-gif" alt="funny cow gif" />;
 }

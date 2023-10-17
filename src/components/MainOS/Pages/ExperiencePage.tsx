@@ -26,11 +26,12 @@ export default function ExperiencePage(props: any) {
         { key: 'projects', name: 'Personal Projects' },
     ];
     return (
-        <>
+        <div id='exp-window'>
             {experienceTypes.map(({ key, name }) => {
                 return (
-                    <>
+                    <div className='section'>
                         {name}
+
                         <ul>
                             {Object.entries(json[key]).map(([name, info]) => {
                                 return (
@@ -45,11 +46,11 @@ export default function ExperiencePage(props: any) {
                                     </li>
                                 );
                             })}
-                        </ul>
-                    </>
+                        </ul></div>
+
                 );
             })}
-        </>
+        </div>
     );
 }
 

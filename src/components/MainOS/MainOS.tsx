@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Draggable from "../Draggable/CustomDraggable";
 import { BootSequence, BootText } from "./BootSequence";
 import "./BootSequence.scss";
@@ -30,6 +30,7 @@ export default function MainOS(props: any) {
   const [bodyComp, setBodyComp] = useState(
     <BootSequence onClickBoot={onClickBoot}></BootSequence>
   );
+  useEffect(onClickBoot, []) // auto boot
   return (
     <Draggable
       handle=".OSheader"

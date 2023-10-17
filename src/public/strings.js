@@ -1,70 +1,22 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     paragraph: [
-        'Hi!, My name is Jefferson Li. <br><br>',
-        'I am a <b>Full Stack Developer</b> specializing in Angular, with a focus on building scalable and responsive software ( try to break this site 😉 ). <br> <br> ',
-        "Previously at <a href='https://temerityanalytics.com/' target='_blank'><b>Temerity Analytics</b></a>.<br>",
-        'Currently pursuing a specialist in <b>Software Engineering</b> and a minor in <b>Statistics</b> at the ',
-        "<a href='https://www.utoronto.ca' target='_blank'><b> University of Toronto </b></a>(2023)<br><br>",
-        'I love going to the <b>gym</b>, <b>badminton</b>, and <b>photography</b>, I also love to create and bring <b>user friendly</b> and <b>responsive designs</b> to life!',
+        `Hi! I am Jefferson Li 🌮.
+        <br/>
+        <br/>
+        I am a Software Engineer previously at <b><i><a href='/hello'>Amazon</a></i></b> and <b><i>Fidelity</i></b>,<br/> 
+        where I utilized various frontend and backend techonologies to impliment systems with a focus on <b>scalability</b> and <b>ease of use</b>.<br/><br/>
+        
+        I studied at the 
+            <a href='https://www.utoronto.ca' target='_blank'><b><i> University of Toronto </i></b></a>(2023)
+        where I graduated with a specialist in <b>software engineering</b> and minor in <b>statistics</b>.<br/><br/>
+
+        In my free time I love to hike and backpack, as well as learning about and implimenting machine learning techniques.<br/>`
     ],
-    qualifications: {
-        'Technical Skills': {
-            Web: {
-                'HTML/CSS/JS':
-                    'Created several sites using HTML/CSS/JS, including this one!',
-                Angular:
-                    'Worked with an Angular frontend during my time as a full-stack developer at Termerity Analytics',
-                React:
-                    'Learned independently using official documentation and developed this personal portfolio using React',
-                'Django/Django REST framwork/Django ORM':
-                    'Worked with the Django REST framework backend during my time as a full-stack developer at Termerity Analytics',
-                Flask:
-                    'Used Flask to create numerous REST APIs as well as server-side rendered web apps',
-                'SQL/PostgreSQL/SQLite':
-                    'Utilized PostgreSQL during my time as a full-stack developer at Termerity Analytics',
-                RxJS:
-                    'Experienced with writing involved asynchronous pipes using the RxJS library to handle backend data',
-                'Redux/NgRx': `Used the Redux/NgRx architecture in numerous projects to handle local state.<br>Achieved optimal data fetching with the Action/Reducer/Effects architecture`,
-            },
-            General: {
-                C: 'Achived 93% in C based programming course at UofT',
-                'Python/NumPy': `4+ years of python writing numerous scripts<br>Developed numerous machine learning algorithms in school, used NumPy for matrix algebra`,
-                'JS/Typescript':
-                    '8 Month proffessional experience building numerous features using JS/TS during my time as at Termerity Analytics',
-                Java: 'Built numerous android apps and REST apis using Java',
-                GIT: `Used during my work as a fullstack developer, as well as all of my personal projects.<br>Profficient in resolving conflicts and researching solutions to complex issues regarding git`,
-                Agile:
-                    'Followed an Agile development process during my work at Termerity Analytics',
-            },
-            Testing: {
-                'Jasmine/Karma':
-                    'Used to test front end Angular code duing my time as a fullstack developer for Termerity Analytics ',
-                Postman:
-                    'Used to test back end APIs duing my time as a fullstack developer for Termerity Analytics',
-                Swagger:
-                    'Used to Document APIs duing my time as a fullstack developer for Termerity Analytics',
-            },
-            Tools: {
-                'Windows/MacOS/Linux': '',
-                'Android Studio': 'Used to create numerous Android apps',
-                'Microsoft Office Suite':
-                    'Profficient in Word, Excel, Powerpoint',
-                Sourcetree: 'My prefered Git GUI',
-                Jira: 'Collaborated using Jira for a 6 person group project',
-            },
-        },
-        Education: {
-            'University of Toronto': 'Class of 2023',
-            'Software Engineering Specialist, Statistics Minor':
-                'GPA: 3.82/4.0',
-        },
-        'Interests and Hobbies': [
-            'Badminton',
-            'Swimming',
-            'Weight Training',
-            "<a href='https://www.instagram.com/jeffersonlii/' target='_blank'><b>Photography</b></a>",
-        ],
+    skills: {
+        Languages: ['JS/Typescript', 'HTML/CSS', 'Python', 'Java'],
+        Libraries: ['Angular', 'React', 'NodeJs', 'RxJS', 'Redux', 'NumPy', 'Tensorflow'],
+        Tools: ['Git', 'Jira', 'Github Actions', 'Figma']
     },
     projects: {
         Pathfinder: {
@@ -233,6 +185,7 @@ export default {
     },
     'work exp': {
         'Temerity Analytics': {
+            logo: 'logos/temerity.png',
             desc: 'Full-Stack Developer Intern',
             link: 'https://temerityanalytics.com/',
             time: '01/2020 - 08/2020',
@@ -262,10 +215,9 @@ export default {
     },
     credits: [
         'Developed with 🌮 by Jefferson Li <br/><br/>',
-        "Built using React with <a href='https://www.npmjs.com/package/react-draggable' target='_blank'><b>react-draggable</b></a><br/><br/>",
-        'Best Viewed On Chrome<br/>',
+        "Built using React with <a href='https://www.npmjs.com/package/react-draggable' target='_blank'><b>react-draggable</b></a> <br/>",
+        "<a href='https://github.com/Jeffersonlii/psite-v3' target='_blank'><b>Source Code</b></a> <br/><br/><br>",
         `©${new Date().getFullYear()} Jefferson Li. All rights reserved.`,
-        "<br/><br/><a href='https://github.com/Jeffersonlii/psite-v3' target='_blank'><b>Source Code</b></a>",
     ],
     socials: [
         {
@@ -277,11 +229,6 @@ export default {
             name: 'Github',
             link: 'https://github.com/Jeffersonlii',
             desc: 'See My Projects',
-        },
-        {
-            name: 'Instagram',
-            link: 'https://www.instagram.com/jeffersonlii/',
-            desc: 'See My Photography',
         },
     ],
 };
