@@ -41,7 +41,10 @@ export function BootText() {
                     .break()
                     .type('BOOTING FROM HARD DISK')
                     // .pause(pause)
-                    .type('. . .', { speed: pause * 4 + 1 });
+                    .type('. . .', { speed: 200 })
+                    .break()
+                    .break()
+                    .type('PRESS ANY KEY TO CONTINUE');
                 return instance;
             }}
         />

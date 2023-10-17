@@ -8,11 +8,27 @@ import DesktopFiles from "./Pages/Pages";
 import * as service from "../Parent/ParentService";
 
 export default function MainOS(props: any) {
+  const [clicked, setClicked] = useState(false);
+
   const onClickBoot = () => {
+    setClicked(true)
+  };
+
+  useEffect(() => {
     service.$audioToggle.next();
-    setBodyComp(
-      <>
-        <div className="fadein">
+    document.addEventListener('keydown', onClickBoot);
+  }, [])
+
+
+
+  return (
+    <Draggable
+      handle=".OSheader"
+      defaultClassName="mainOS react-draggable"
+      focusable={false}
+    >
+      <div className="OSbackground">
+        <div className={'fadeOut ' + (clicked ? 'toFade' : '')} onClick={onClickBoot}>
           <div className="initText">
             <BootText></BootText>
           </div>
@@ -24,20 +40,7 @@ export default function MainOS(props: any) {
         <div id="desktop">
           <DesktopFiles></DesktopFiles>
         </div>
-      </>
-    );
-  };
-  const [bodyComp, setBodyComp] = useState(
-    <BootSequence onClickBoot={onClickBoot}></BootSequence>
-  );
-  useEffect(onClickBoot, []) // auto boot
-  return (
-    <Draggable
-      handle=".OSheader"
-      defaultClassName="mainOS react-draggable"
-      focusable={false}
-    >
-      <div className="OSbackground">{bodyComp}</div>
+      </div>
     </Draggable>
   );
 }

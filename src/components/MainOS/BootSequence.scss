@@ -1,20 +1,20 @@
-$black-time: 2s;
-.fadein {
+$black-time: 1s;
+.fadeOut {
     width: 100%;
     height: 100%;
     background-color: black;
     position: absolute;
-    animation: fadeIn $black-time ease-out;
-    opacity: 0;
+    &.toFade{
+        animation: fadeOut $black-time ease-out;
+        pointer-events: none;
+        opacity: 0;
+    }
     z-index: 999;
-    pointer-events: none;
     display: flex;
     .initText {
         color: white;
-        animation: typeText $black-time ease-out;
         text-align: initial;
         margin: 2rem;
-        opacity: 0;
         width: 100%;
     }
 }
@@ -34,20 +34,19 @@ $black-time: 2s;
 
     margin: 1rem;
 }
-@keyframes fadeIn {
+@keyframes fadeOut {
     0% {
-        pointer-events: all;
-        cursor: progress;
         opacity: 1;
     }
     25% {
-        opacity: 1;
+        opacity: 0;
     }
     50% {
-        opacity: 1;
+        opacity: 0;
     }
     100% {
         opacity: 0;
+        display: none;
     }
 }
 
