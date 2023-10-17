@@ -9,17 +9,21 @@ const tableContents = Object.keys(json.skills).map((category) => (
     </tbody>
 ))
 
+
+
 export default function Me() {
+
+
     return (
         <div id='me-window'>
             <div dangerouslySetInnerHTML={{ __html: json.paragraph.join('') }} />
             <div>
-                <i >Skills</i>
-            <table>
-                {tableContents}
-            </table>
+                <i id='title'>Skills</i>
+                <table>
+                    {tableContents}
+                </table>
             </div>
-            
+
         </div>
     );
 }

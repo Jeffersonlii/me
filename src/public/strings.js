@@ -4,7 +4,7 @@ export default {
         `Hi! I am Jefferson Li 🌮.
         <br/>
         <br/>
-        I am a Software Engineer previously at <b><i><a href='/hello'>Amazon</a></i></b> and <b><i>Fidelity</i></b>,<br/> 
+        I am a Software Engineer previously at <b><i>Amazon</i></b> and <b><i>Fidelity</i></b>,<br/> 
         where I utilized various frontend and backend techonologies to impliment systems with a focus on <b>scalability</b> and <b>ease of use</b>.<br/><br/>
         
         I studied at the 
@@ -184,18 +184,59 @@ export default {
         },
     },
     'work exp': {
+        'Amazon': {
+            logo: '/logos/amazon.png',
+            desc: 'Software Development Engineer Intern',
+            link: 'https://Amazon.com/',
+            time: 'May/2022 - August/2022',
+            modal_details: {
+                Role: [
+                    'To <i>Gather requirements, Design, and Develop</i> an Internal Tool in 12 weeks.',
+                    'The internal tool tool aids Amazon employees in kickstarting the flywheel of an item when it has been out of stock for an extended period.'
+                ],
+                Achivements: [
+                    'Demonstrated coach-ability by <i>acting on advice from manager</i> to simplify platform and engage with end-users',
+                    'Showed commitment to customers by <i>organizing 4 end-user interviews</i> to understand customer values and pain-points',
+                    'Exhibited adaptability by accommodating evolving requirements from end-users while consistently <i>surpassing all scheduled targets</i>.',
+                    'Earned the only <i>intern recognition by upper management</i> during quarterly strategy meeting, and received a return offer'
+                ],
+                Tech: [
+                    '(React, Figma, Amazon CI/CD Pipeline)',
+                ],
+            }
+        },
+        'Fidelity Investments': {
+            logo: '/logos/fidelity.png',
+            desc: 'Full-Stack Developer / Automation Intern',
+            link: 'https://www.fidelity.ca/en/',
+            time: '01/2020 - 08/2020',
+            modal_details: {
+                Role: [
+                    'Fullstack developer, developing all aspects of Fidelity uniFide',
+                    'Automation Engineer, developing automation processes and tools for internal employees',
+                ],
+                Achivements: [
+                    'Utilized Angular to implement bug fixed and iterations on Fidelity UniFide',
+                    'Proactively volunteered to join the automation team during understaffing',
+                    'Designed and implemented conversion and reporting services using Java Spring Boot, <i>streamlining tasks for hundreds of internal Fidelity employees</i>.'
+                ],
+                Tech: [
+                    '(Angular, Java Springboot)',
+                ],
+            }
+        },
         'Temerity Analytics': {
-            logo: 'logos/temerity.png',
+            logo: '/logos/temerity.png',
             desc: 'Full-Stack Developer Intern',
             link: 'https://temerityanalytics.com/',
-            time: '01/2020 - 08/2020',
+            time: 'January/2020 - August/2020',
             modal_details: {
                 Role: [
                     'Fullstack developer, developing all aspects of Merln, our cloud-based marketing analysis software',
                 ],
                 Achivements: [
-                    'Rearchetected the client-facing admin interface, which significantly improved the overall usability and stability of the software, and resulted in a final performance evaluation of ’Excellent’',
-                    'Drove a unit testing effort, getting API test coverage from 0% -> 40%, and speeding up some endpoints by more than 80%',
+                    'Rearchetected the client-facing admin interface, which <i>significantly improved the overall usability and stability</i> of the software, and resulted in a final performance evaluation of ’Excellent’',
+                    'Drove a unit testing effort, improving <i>API test coverage from 0% -> 40%, and speeding up some endpoints by more than 80%</i>',
                 ],
                 Tech: [
                     '(Angular, Django ORM/ REST framework, RxJS, Redux, NgRx, npm, PostgreSQL)',

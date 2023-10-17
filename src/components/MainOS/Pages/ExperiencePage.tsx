@@ -30,24 +30,19 @@ export default function ExperiencePage(props: any) {
             {experienceTypes.map(({ key, name }) => {
                 return (
                     <div className='section'>
-                        {name}
+                        <i id="title">{name}</i>
 
-                        <ul>
+                        <div className="expBoxes">
                             {Object.entries(json[key]).map(([name, info]) => {
                                 return (
-                                    <li
-                                        onClick={() => {
-                                            openExperience(name, info);
-                                        }}
-                                    >
-                                        <div id="link">
-                                            {name} : {info.time}
-                                        </div>
-                                    </li>
+                                    <div className='logo'>
+                                        <img src={process.env.PUBLIC_URL + info.logo} alt={name}
+                                            onClick={() => openExperience(name, info)} />
+                                    </div>
                                 );
                             })}
-                        </ul></div>
-
+                        </div>
+                    </div>
                 );
             })}
         </div>
@@ -73,40 +68,37 @@ function ExperienceDetail(props: { name: string; info: any }) {
                 header: (imgDetail.url
                     .split('/')
                     .pop() as string).toUpperCase(),
-                // width: '80vw',
-                // height: '80vh',
                 disableExpand: true,
             },
         });
     };
 
     return (
-        <>
-            <h1>
-                {props.name} - {props.info.time}
-            </h1>
-            <section>{props.info.desc}</section>
+        <div className='exp-detail-window'>
+            <h1>{props.name}</h1>
+            <h4>{props.info.time}</h4>
+            <section className='role'>{props.info.desc}</section>
+
             {Object.keys(props.info['modal_details']).map((section) => {
                 return (
-                    <ul>
-                        <li>
-                            {section}
-                            <ul>
-                                {props.info['modal_details'][section].map(
-                                    (point: string) => (
-                                        <li
-                                            dangerouslySetInnerHTML={{
-                                                __html: point,
-                                            }}
-                                        />
-                                    )
-                                )}
-                            </ul>
-                        </li>
-                    </ul>
+                    <>
+                        <div id='title'>{section}</div>
+                        <ul>
+                            {props.info['modal_details'][section].map(
+                                (point: string) => (
+                                    <li
+                                        dangerouslySetInnerHTML={{
+                                            __html: point,
+                                        }}
+                                    />
+                                )
+                            )}
+                        </ul>
+                    </>
+
                 );
             })}
-            <section>{props.info['images'] ? 'Relevant Media' : ''}</section>
+            <div id='title'>{props.info['images'] ? 'Relevant Media' : ''}</div>
             <div className="img-grid">
                 {props.info['images']?.map(
                     (img: { url: string; desc: string }) => {
@@ -120,16 +112,11 @@ function ExperienceDetail(props: { name: string; info: any }) {
                                         openImage(img);
                                     }}
                                 />
-                                <ul>
-                                    <li style={{ width: '15rem' }}>
-                                        {img.desc}
-                                    </li>
-                                </ul>
                             </div>
                         );
                     }
                 )}
             </div>
-        </>
+        </div>
     );
 }

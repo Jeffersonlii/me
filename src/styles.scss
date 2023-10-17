@@ -1,3 +1,23 @@
 $lightBorder: 1px black solid;
 $border: 2px black solid;
 $heavyBorder: 4px black solid;
+
+.dotten-background {
+    // Colors
+    $bg-color: grey;
+    $dot-color: white;
+
+    // Dimensions
+    $dot-size: 2px;
+    $dot-space: 3px;
+    background: linear-gradient(
+                90deg,
+                $bg-color ($dot-space - $dot-size),
+                transparent 1%
+            )
+            center,
+        linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%)
+            center,
+        $dot-color;
+    background-size: $dot-space $dot-space;
+}
