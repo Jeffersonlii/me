@@ -23,6 +23,8 @@ export default {
             desc: 'Easy to use visualizer for pathfinding algorithms',
             link: '',
             time: '02/2021',
+            logo: '/logos/pathfinder.gif',
+
             modal_details: {
                 What: [
                     "Visualize pathfinding algorithms such as Dijkstra's with customizable maps and waypoints ",
@@ -45,6 +47,8 @@ export default {
                 'React Webapp that matches random users to rooms based on perferences',
             link: '',
             time: '02/2021',
+            logo: '/logos/cafe.png',
+
             modal_details: {
                 Goal: [
                     'To created an omegle like platform with a smart matching system',
@@ -74,6 +78,7 @@ export default {
             desc: 'Large Angular web app for debating/betting on sports',
             link: '',
             time: '01/2021',
+            logo: '/logos/sportcred.png',
             modal_details: {
                 Goal: [
                     'With a team of 6, to create a large platform for competitive debates and trivia on sports league related topics',
@@ -112,6 +117,8 @@ export default {
             desc: "You're looking at it!",
             link: '',
             time: '01/2021',
+            logo: '/logo.png',
+
             modal_details: {
                 Goal: [
                     'To develop an extendable and responsive website showcasing my achievements  and experiences',
@@ -131,6 +138,7 @@ export default {
         Gold: {
             desc: 'Android Shopping App',
             link: '',
+            logo: '/logos/gold.png',
             time: '11/2019',
             modal_details: {
                 Goal: [
@@ -163,6 +171,7 @@ export default {
             desc: 'Location Sharing Web App',
             link: 'https://github.com/Jeffersonlii/Where-Am-I-',
             time: '08/2019',
+            logo: '/logos/wami.png',
             modal_details: {
                 Goal: ['To allow instant location sharing via a link'],
                 'My Tasks': [
