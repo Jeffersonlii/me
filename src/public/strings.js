@@ -18,11 +18,61 @@ export default {
         Libraries: ['Angular', 'React', 'NodeJs', 'RxJS', 'Redux', 'NumPy', 'Tensorflow'],
         Tools: ['Git', 'Jira', 'Github Actions', 'Figma']
     },
+    mlProjects: {
+        Edgeracer: {
+            desc: 'Training an AI agent to complete a race course',
+            link: '',
+            time: 'August 2023',
+            logo: '/projects-and-work/edgeracer/edgeracer.gif',
+
+            modal_details: {
+                What: [
+                    "Developed a driving simulator utilizing PixiJS",
+                    'Implemented an AI learning system using <i>Deep Q Learning techniques </i>(reinforcement learning), using TensorFlow.JS',
+                    'Designed and implemented the <i>loss function and back-propagation</i> within the Neural Networks',
+                    'Optimized hyper-parameters and the reward function resulting in the agent achieving <i>convergence to a successful strategy within 300 episodes</i>'
+                ],
+                Tech: [
+                    'HTML/TS/CSS, Tensorflow.JS, PixiJS',
+                ],
+                Links: [
+                    "<a href='https://jeffersonlii.github.io/Edgeracer/' target='_blank'><b>App</b></a>",
+                    "<a href='https://github.com/Jeffersonlii/Edgeracer' target='_blank'><b>Repo</b></a>",
+                ],
+            },
+            images: [
+                {
+                    url: '/projects-and-work/edgeracer/edgeracer.gif',
+                    desc: 'Demo',
+                },
+            ],
+        },
+        'LoL Genius': {
+            desc: 'Predicting game match results with historical League of Legends Data',
+            link: '',
+            time: 'June 2021',
+            logo: '',
+            modal_details: {
+                What: [
+                    "Created a match results prediction tool using machine learning and the <i>Riot Games API</i>",
+                    "Utilized a crawl algorithm to collect data of varied skill and champion selection",
+                    "predict their match outcome with <i>73% accuracy</i>",
+                    ""
+                ],
+                Tech: [
+                    'React, Python (Flask, scikit-learn, pandas), Riot API',
+                ],
+                Links: [
+                    "<a href='https://github.com/Jeffersonlii/LoLGenius' target='_blank'><b>Repo</b></a>",
+                ],
+            }
+        },
+    },
     projects: {
         Pathfinder: {
             desc: 'Easy to use visualizer for pathfinding algorithms',
             link: '',
-            time: '02/2021',
+            time: 'Febuary 2021',
             logo: '/logos/pathfinder.gif',
 
             modal_details: {
@@ -46,7 +96,7 @@ export default {
             desc:
                 'React Webapp that matches random users to rooms based on perferences',
             link: '',
-            time: '02/2021',
+            time: 'Febuary 2021',
             logo: '/logos/cafe.png',
 
             modal_details: {
@@ -77,7 +127,7 @@ export default {
         SportsCred: {
             desc: 'Large Angular web app for debating/betting on sports',
             link: '',
-            time: '01/2021',
+            time: 'January 2021',
             logo: '/logos/sportcred.png',
             modal_details: {
                 Goal: [
@@ -116,7 +166,7 @@ export default {
         'Personal Website': {
             desc: "You're looking at it!",
             link: '',
-            time: '01/2021',
+            time: 'January 2021',
             logo: '/logo.png',
 
             modal_details: {
@@ -139,7 +189,7 @@ export default {
             desc: 'Android Shopping App',
             link: '',
             logo: '/logos/gold.png',
-            time: '11/2019',
+            time: 'November 2019',
             modal_details: {
                 Goal: [
                     'To develop a shopping android app with a 3 person team for a software design class',
@@ -170,7 +220,7 @@ export default {
         'Where Am I?': {
             desc: 'Location Sharing Web App',
             link: 'https://github.com/Jeffersonlii/Where-Am-I-',
-            time: '08/2019',
+            time: 'August 2019',
             logo: '/logos/wami.png',
             modal_details: {
                 Goal: ['To allow instant location sharing via a link'],
@@ -197,7 +247,7 @@ export default {
             logo: '/logos/amazon.png',
             desc: 'Software Development Engineer Intern',
             link: 'https://Amazon.com/',
-            time: 'May/2022 - August/2022',
+            time: 'May 2022 - August 2022',
             modal_details: {
                 Role: [
                     'To <i>Gather requirements, Design, and Develop</i> an Internal Tool in 12 weeks.',
@@ -218,7 +268,7 @@ export default {
             logo: '/logos/fidelity.png',
             desc: 'Full-Stack Developer / Automation Intern',
             link: 'https://www.fidelity.ca/en/',
-            time: '01/2020 - 08/2020',
+            time: 'September 2021 - April 2022',
             modal_details: {
                 Role: [
                     'Fullstack developer, developing all aspects of Fidelity uniFide',
@@ -238,7 +288,7 @@ export default {
             logo: '/logos/temerity.png',
             desc: 'Full-Stack Developer Intern',
             link: 'https://temerityanalytics.com/',
-            time: 'January/2020 - August/2020',
+            time: 'January 2020 - August 2020',
             modal_details: {
                 Role: [
                     'Fullstack developer, developing all aspects of Merln, our cloud-based marketing analysis software',

@@ -21,8 +21,9 @@ export default function ExperiencePage(props: any) {
         });
     };
 
-    const experienceTypes: { key: 'work exp' | 'projects'; name: string }[] = [
+    const experienceTypes: { key: 'work exp' | 'projects' | 'mlProjects'; name: string }[] = [
         { key: 'work exp', name: 'Work Experience' },
+        { key: 'mlProjects', name: 'Machine Learning Projects'},
         { key: 'projects', name: 'Personal Projects' },
     ];
     return (

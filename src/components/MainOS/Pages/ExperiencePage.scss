@@ -1,38 +1,48 @@
-.exp-detail-window{
-    h1{
+.exp-detail-window {
+    h1 {
         color: white;
         background-color: black;
         display: flex;
         justify-content: center;
     }
-    h1, h4{
+
+    h1,
+    h4 {
         margin: 0.2rem;
     }
-    section{
+
+    section {
         margin-bottom: 1rem;
     }
-    #title{
+
+    #title {
         font-size: large;
         font-style: italic;
     }
-    ul{
+
+    ul {
         margin-top: 0;
-        li{
+
+        li {
             margin-top: 0.5rem;
         }
     }
+
     i {
         color: blue;
         border: 1px blue solid;
     }
+
     .role {
         font-style: italic;
         color: red
     }
 }
+
 #link {
     cursor: pointer;
     margin-bottom: 1rem;
+
     &:hover {
         background-color: black;
         color: white;
@@ -84,7 +94,12 @@
     height: 100%;
 
     #title {
-        font-size: large;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: x-large;
+        text-align: center;
     }
 
     .expBoxes {
@@ -92,7 +107,7 @@
         flex-wrap: wrap;
         gap: 1rem;
         margin: 1rem 0;
-
+        justify-content: center;
         .logo {
             width: 100px;
             height: 100px;
@@ -108,7 +123,8 @@
 
 
             img {
-                object-fit: scale-down;;
+                object-fit: scale-down;
+                ;
                 /* Maintain aspect ratio and cover the entire container */
                 width: 100%;
                 /* Make sure the image fills the container */
