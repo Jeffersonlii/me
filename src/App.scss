@@ -2,6 +2,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  font-size: 90%;
 }
 
 .App-logo {
@@ -42,3 +43,11 @@
 #warning {
   padding: 0.5rem;
 }
+
+
+@media only screen and (max-width: 800px) {
+  .App {
+    font-size: 75%;
+  }
+}
+
