@@ -26,10 +26,10 @@
         top: 0;
         text-align: center;
         bottom: 0;
-        width: 0.8rem;
-        height: 0.7rem;
         border: 1px black solid;
         background-color: white;
+        height: 100%;
+        aspect-ratio: 1/1;
         cursor: pointer;
         &:active {
             background-color: black;
