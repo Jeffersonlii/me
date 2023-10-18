@@ -102,6 +102,7 @@ export default class Parent extends React.Component<
             url={[{ src: "wn2.mp3", type: "audio/mpeg" }]}
             loop={false}
             playing={true}
+            playsinline
             volume={this.state.audioOptions.vol}
             config={{
               file: {
@@ -120,6 +121,7 @@ export default class Parent extends React.Component<
             muted
             playing
             playsinline
+            controls
             width="100%"
             height="100%"
             config={{
