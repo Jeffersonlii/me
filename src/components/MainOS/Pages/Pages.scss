@@ -7,28 +7,27 @@
     justify-content: flex-start;
     align-content: baseline;
     gap: 2rem;
-}
 
-.file {
-    margin: 2rem 0 0 2rem;
-    cursor: pointer;
-    word-break: initial;
-}
 
-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .file {
+        cursor: pointer;
+        word-break: initial;
+    }
 
-    padding: 0.5rem;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-    img {
-        margin-bottom: 0.3rem;
-        animation: float 4s ease-in-out infinite;
+        padding: 0.5rem;
+
+        img {
+            margin-bottom: 0.3rem;
+            animation: float 4s ease-in-out infinite;
+        }
     }
 }
-
 
 #rand-gif {
     width: 100%;
