@@ -3,7 +3,6 @@ import "../MainOS.scss";
 import logo from "./../../../public/appLogo.png";
 import "./OSHeader.scss";
 import * as service from "../../Parent/ParentService";
-import { act } from "react-dom/test-utils";
 
 export interface DropDownLabel {
   label: string;
@@ -132,7 +131,8 @@ export default function OSHeader(props: any) {
             opened: action === 'down' ? !a.opened : action === "enter",
           };
         }
-        return a;
+        return {...a, opened : false};
+        // return a;
       })
     );
   };

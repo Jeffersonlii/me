@@ -121,7 +121,6 @@ export default class Parent extends React.Component<
             muted
             playing
             playsinline
-            controls
             width="100%"
             height="100%"
             config={{
