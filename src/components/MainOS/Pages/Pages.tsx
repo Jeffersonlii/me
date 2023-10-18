@@ -47,7 +47,7 @@ export default function DesktopFiles(props: any) {
                     params: {
                         header: 'EXPERIENCES.HTML',
                         width: '25rem',
-                        height: '40rem',
+                        height: '30rem',
                     },
                 });
             },
