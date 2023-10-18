@@ -1,7 +1,7 @@
 @import '../../styles.scss';
 
 .mainOS {
-    height: 80vh;
+    height: 80dvh;
     aspect-ratio : 1 / 1 ;
     max-width: 1500px;
     transition: width 0.5s;
@@ -42,7 +42,7 @@
 @media only screen and (max-width: 800px) {
     .mainOS {
         width: 95dvw;
-        height: 90dvh;
+        height: 95dvh;
         aspect-ratio: none;
         top: 1rem;
     }
