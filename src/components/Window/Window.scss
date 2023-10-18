@@ -61,14 +61,13 @@
 @media only screen and (max-width: 800px) {
     .window {
         position: relative;
-        margin-top: -4rem;
         .contents {
             transition: width 0.5s;
             transition: height 0.5s;
             min-width: unset;
             min-height: unset;
             width: 90dvw !important;
-            height: 80dvh !important;
+            height: 90dvh !important;
         }
     }
 }
