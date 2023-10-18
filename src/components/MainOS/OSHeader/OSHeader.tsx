@@ -3,6 +3,7 @@ import "../MainOS.scss";
 import logo from "./../../../public/appLogo.png";
 import "./OSHeader.scss";
 import * as service from "../../Parent/ParentService";
+import { act } from "react-dom/test-utils";
 
 export interface DropDownLabel {
   label: string;
@@ -119,17 +120,23 @@ export default function OSHeader(props: any) {
   });
 
   const [group, setGroup] = useState(
-    dropdowns.map((a) => ({ ...a, opened: false })) //attached a 'opened' flag
+    dropdowns.map((a) => ({ ...a, opened: false })) //attached a flags
   );
 
-  let onToggle = (id: number, action: "enter" | "leave") => {
+  let onToggle = (id: number, action: "enter" | "leave" | "down") => {
     setGroup(
       group.map((a) => {
-        if (a.id === id) return { ...a, opened: action === "enter" };
+        if (a.id === id) {
+          return {
+            ...a,
+            opened: action === 'down' ? !a.opened : action === "enter",
+          };
+        }
         return a;
       })
     );
   };
+
   return (
     <>
       <div className="link img">
@@ -144,6 +151,7 @@ export default function OSHeader(props: any) {
             key={label.id}
             onMouseOver={(e) => onToggle(label.id, "enter")}
             onMouseLeave={(e) => onToggle(label.id, "leave")}
+            onMouseDown={(e) => onToggle(label.id, "down")}
           >
             {label.label}
             {(() => {

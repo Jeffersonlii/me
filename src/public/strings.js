@@ -316,7 +316,7 @@ export default {
     credits: [
         'Developed with 🌮 by Jefferson Li <br/><br/>',
         "Built using React with <a href='https://www.npmjs.com/package/react-draggable' target='_blank'><b>react-draggable</b></a> <br/>",
-        "<a href='https://github.com/Jeffersonlii/psite-v3' target='_blank'><b>Source Code</b></a> <br/><br/><br>",
+        "<a href='https://github.com/Jeffersonlii/me' target='_blank'><b>Source Code</b></a> <br/><br/><br>",
         `©${new Date().getFullYear()} Jefferson Li. All rights reserved.`,
     ],
     socials: [
