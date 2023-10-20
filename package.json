@@ -28,7 +28,7 @@
         "web-vitals": "~0.2.4"
     },
     "scripts": {
-        "i": "set NODE_OPTIONS=--openssl-legacy-provider && npm i --save --legacy-peer-deps",
+        "i": "nvm use 17 && set NODE_OPTIONS=--openssl-legacy-provider && npm i --save --legacy-peer-deps",
         "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
         "build": "set NODE_OPTIONS=--openssl-legacy-provider && rimraf build && react-scripts build --openssl-legacy-provider",
         "test": "react-scripts test",
